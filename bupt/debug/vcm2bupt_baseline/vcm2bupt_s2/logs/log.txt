@@ -1,0 +1,307 @@
+
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/wangzj/datasets/', bupt_data_path='/data1/wangzj/datasets/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=400, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='bupt/debug/vcm2bupt_baseline', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=30, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0, eps=0.6, eps_gap=0.02, k1=30, k2=6, momentum=0.2, use_hard=False, temp=0.05, iters=200, workers=8, seq_lenth=6, c_learning_rate=0.0007, num_instances=4, pooling_type='gem', no_cam=False, eval_step=1)
+==> Load unlabeled dataset
+IR Clustering criterion: eps: 0.600
+RGB Clustering criterion: eps: 0.600
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 0: 890 clusters
+==> Statistics for RGB epoch 0: 921 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 13:02:39; Epoch: 0; loss_ir: 0.3024754;  loss_rgb: 3.5976286;  total_loss: 3.9001043;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 1: 881 clusters
+==> Statistics for RGB epoch 1: 941 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 13:50:53; Epoch: 1; loss_ir: 0.3509967;  loss_rgb: 3.3844528;  total_loss: 3.7354481;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 2: 885 clusters
+==> Statistics for RGB epoch 2: 921 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 14:39:29; Epoch: 2; loss_ir: 0.39405036;  loss_rgb: 3.775066;  total_loss: 4.169114;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 3: 889 clusters
+==> Statistics for RGB epoch 3: 940 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 15:41:23; Epoch: 3; loss_ir: 0.4146597;  loss_rgb: 3.6869159;  total_loss: 4.1015754;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 4: 868 clusters
+==> Statistics for RGB epoch 4: 939 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 16:43:32; Epoch: 4; loss_ir: 0.3887353;  loss_rgb: 3.725385;  total_loss: 4.1141205;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 5: 892 clusters
+==> Statistics for RGB epoch 5: 932 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 17:45:35; Epoch: 5; loss_ir: 0.3743295;  loss_rgb: 3.5993903;  total_loss: 3.9737196;  ; 2.5000000000000004e-07
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 6: 890 clusters
+==> Statistics for RGB epoch 6: 935 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 18:33:05; Epoch: 6; loss_ir: 0.35480854;  loss_rgb: 3.4353273;  total_loss: 3.7901351;  ; 2.5000000000000004e-07
+Time: 2025-04-10 18:35:06; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.26% | Rank-1: 32.81% | Rank-5: 52.54% | Rank-10: 60.35% | Rank-20: 68.16%., 
+ task: IR ->RGB:  mAP: 28.96% | Rank-1: 28.35% | Rank-5: 46.74% | Rank-10: 55.94% | Rank-20: 62.45%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 7: 874 clusters
+==> Statistics for RGB epoch 7: 931 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 19:19:59; Epoch: 7; loss_ir: 0.34552234;  loss_rgb: 3.2758675;  total_loss: 3.6213906;  ; 2.5000000000000004e-07
+Time: 2025-04-10 19:22:01; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.21% | Rank-1: 32.62% | Rank-5: 51.56% | Rank-10: 61.13% | Rank-20: 67.77%., 
+ task: IR ->RGB:  mAP: 28.51% | Rank-1: 27.59% | Rank-5: 47.70% | Rank-10: 54.60% | Rank-20: 62.07%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 8: 898 clusters
+==> Statistics for RGB epoch 8: 931 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 20:06:52; Epoch: 8; loss_ir: 0.33563143;  loss_rgb: 3.6208282;  total_loss: 3.956459;  ; 2.5000000000000004e-07
+Time: 2025-04-10 20:08:53; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.55% | Rank-1: 33.20% | Rank-5: 52.15% | Rank-10: 60.35% | Rank-20: 68.36%., 
+ task: IR ->RGB:  mAP: 29.38% | Rank-1: 28.74% | Rank-5: 49.04% | Rank-10: 55.75% | Rank-20: 63.60%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 9: 875 clusters
+==> Statistics for RGB epoch 9: 950 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 21:03:08; Epoch: 9; loss_ir: 0.34348625;  loss_rgb: 3.548038;  total_loss: 3.8915246;  ; 2.5000000000000004e-07
+Time: 2025-04-10 21:05:07; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.63% | Rank-1: 33.59% | Rank-5: 52.34% | Rank-10: 60.74% | Rank-20: 68.95%., 
+ task: IR ->RGB:  mAP: 29.60% | Rank-1: 28.93% | Rank-5: 48.85% | Rank-10: 56.32% | Rank-20: 63.98%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 10: 873 clusters
+==> Statistics for RGB epoch 10: 943 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 22:03:45; Epoch: 10; loss_ir: 0.31086975;  loss_rgb: 3.4844003;  total_loss: 3.795272;  ; 2.5000000000000004e-07
+Time: 2025-04-10 22:05:53; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.65% | Rank-1: 33.59% | Rank-5: 51.17% | Rank-10: 60.94% | Rank-20: 69.53%., 
+ task: IR ->RGB:  mAP: 30.06% | Rank-1: 29.89% | Rank-5: 49.62% | Rank-10: 56.51% | Rank-20: 63.98%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 11: 895 clusters
+==> Statistics for RGB epoch 11: 929 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 23:05:04; Epoch: 11; loss_ir: 0.34575126;  loss_rgb: 3.4655445;  total_loss: 3.8112974;  ; 2.5000000000000004e-07
+Time: 2025-04-10 23:07:07; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.01% | Rank-1: 32.81% | Rank-5: 51.95% | Rank-10: 60.55% | Rank-20: 68.95%., 
+ task: IR ->RGB:  mAP: 29.43% | Rank-1: 28.54% | Rank-5: 49.23% | Rank-10: 56.51% | Rank-20: 64.94%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 12: 881 clusters
+==> Statistics for RGB epoch 12: 922 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-10 23:53:03; Epoch: 12; loss_ir: 0.34950736;  loss_rgb: 3.2956057;  total_loss: 3.645114;  ; 2.5000000000000004e-07
+Time: 2025-04-10 23:54:59; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.50% | Rank-1: 33.79% | Rank-5: 52.15% | Rank-10: 60.74% | Rank-20: 69.14%., 
+ task: IR ->RGB:  mAP: 29.39% | Rank-1: 28.35% | Rank-5: 49.62% | Rank-10: 57.09% | Rank-20: 63.79%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 13: 898 clusters
+==> Statistics for RGB epoch 13: 949 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 00:37:24; Epoch: 13; loss_ir: 0.33109194;  loss_rgb: 3.462698;  total_loss: 3.7937899;  ; 2.5000000000000004e-07
+Time: 2025-04-11 00:39:22; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.18% | Rank-1: 32.81% | Rank-5: 51.17% | Rank-10: 60.55% | Rank-20: 68.95%., 
+ task: IR ->RGB:  mAP: 29.42% | Rank-1: 28.93% | Rank-5: 48.28% | Rank-10: 57.09% | Rank-20: 64.37%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 14: 889 clusters
+==> Statistics for RGB epoch 14: 940 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 01:19:59; Epoch: 14; loss_ir: 0.3117002;  loss_rgb: 3.4376945;  total_loss: 3.749394;  ; 2.5000000000000004e-07
+Time: 2025-04-11 01:21:55; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 31.79% | Rank-1: 33.01% | Rank-5: 50.98% | Rank-10: 58.98% | Rank-20: 67.97%., 
+ task: IR ->RGB:  mAP: 29.28% | Rank-1: 27.97% | Rank-5: 49.23% | Rank-10: 56.13% | Rank-20: 64.56%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 15: 896 clusters
+==> Statistics for RGB epoch 15: 946 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 02:01:03; Epoch: 15; loss_ir: 0.28303492;  loss_rgb: 3.4295266;  total_loss: 3.7125618;  ; 2.5000000000000004e-07
+Time: 2025-04-11 02:03:11; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.14% | Rank-1: 33.01% | Rank-5: 51.37% | Rank-10: 59.77% | Rank-20: 69.34%., 
+ task: IR ->RGB:  mAP: 29.78% | Rank-1: 28.93% | Rank-5: 49.81% | Rank-10: 57.66% | Rank-20: 65.33%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 16: 880 clusters
+==> Statistics for RGB epoch 16: 935 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 02:43:33; Epoch: 16; loss_ir: 0.31477785;  loss_rgb: 3.4335942;  total_loss: 3.7483728;  ; 2.5000000000000004e-07
+Time: 2025-04-11 02:45:34; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.82% | Rank-1: 34.57% | Rank-5: 51.37% | Rank-10: 60.16% | Rank-20: 68.75%., 
+ task: IR ->RGB:  mAP: 29.79% | Rank-1: 28.93% | Rank-5: 49.62% | Rank-10: 56.90% | Rank-20: 64.56%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 17: 889 clusters
+==> Statistics for RGB epoch 17: 929 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 03:32:30; Epoch: 17; loss_ir: 0.28103983;  loss_rgb: 3.4224896;  total_loss: 3.7035298;  ; 2.5000000000000004e-07
+Time: 2025-04-11 03:34:28; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.06% | Rank-1: 33.01% | Rank-5: 51.17% | Rank-10: 59.77% | Rank-20: 67.58%., 
+ task: IR ->RGB:  mAP: 29.33% | Rank-1: 28.35% | Rank-5: 49.04% | Rank-10: 56.13% | Rank-20: 64.94%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 18: 884 clusters
+==> Statistics for RGB epoch 18: 948 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 04:20:41; Epoch: 18; loss_ir: 0.2881998;  loss_rgb: 3.5275297;  total_loss: 3.8157299;  ; 2.5000000000000004e-07
+Time: 2025-04-11 04:22:37; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.20% | Rank-1: 33.20% | Rank-5: 51.37% | Rank-10: 60.35% | Rank-20: 68.16%., 
+ task: IR ->RGB:  mAP: 29.63% | Rank-1: 28.74% | Rank-5: 50.19% | Rank-10: 56.51% | Rank-20: 65.13%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 19: 898 clusters
+==> Statistics for RGB epoch 19: 924 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 05:01:23; Epoch: 19; loss_ir: 0.26984546;  loss_rgb: 3.569175;  total_loss: 3.839021;  ; 2.5000000000000004e-07
+Time: 2025-04-11 05:03:27; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.25% | Rank-1: 33.01% | Rank-5: 53.12% | Rank-10: 60.16% | Rank-20: 68.75%., 
+ task: IR ->RGB:  mAP: 29.66% | Rank-1: 28.54% | Rank-5: 51.15% | Rank-10: 58.05% | Rank-20: 65.71%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 20: 909 clusters
+==> Statistics for RGB epoch 20: 939 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 05:42:12; Epoch: 20; loss_ir: 0.28889665;  loss_rgb: 3.5880685;  total_loss: 3.8769653;  ; 2.5000000000000004e-07
+Time: 2025-04-11 05:44:07; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.22% | Rank-1: 33.20% | Rank-5: 52.15% | Rank-10: 60.74% | Rank-20: 68.55%., 
+ task: IR ->RGB:  mAP: 29.90% | Rank-1: 28.74% | Rank-5: 50.77% | Rank-10: 57.09% | Rank-20: 66.48%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 21: 917 clusters
+==> Statistics for RGB epoch 21: 951 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 06:25:50; Epoch: 21; loss_ir: 0.2795703;  loss_rgb: 3.4539282;  total_loss: 3.7334979;  ; 2.5000000000000004e-07
+Time: 2025-04-11 06:27:47; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.81% | Rank-1: 33.59% | Rank-5: 53.32% | Rank-10: 61.13% | Rank-20: 68.95%., 
+ task: IR ->RGB:  mAP: 30.23% | Rank-1: 29.89% | Rank-5: 50.38% | Rank-10: 57.85% | Rank-20: 66.48%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 22: 904 clusters
+==> Statistics for RGB epoch 22: 953 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 07:08:11; Epoch: 22; loss_ir: 0.26998615;  loss_rgb: 3.4408474;  total_loss: 3.7108335;  ; 2.5000000000000004e-07
+Time: 2025-04-11 07:10:07; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.25% | Rank-1: 32.62% | Rank-5: 52.34% | Rank-10: 60.55% | Rank-20: 68.55%., 
+ task: IR ->RGB:  mAP: 30.49% | Rank-1: 30.27% | Rank-5: 50.77% | Rank-10: 58.05% | Rank-20: 65.90%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 23: 894 clusters
+==> Statistics for RGB epoch 23: 948 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 07:53:23; Epoch: 23; loss_ir: 0.29435036;  loss_rgb: 3.6222842;  total_loss: 3.916635;  ; 2.5000000000000004e-07
+Time: 2025-04-11 07:55:25; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.39% | Rank-1: 33.01% | Rank-5: 51.37% | Rank-10: 60.16% | Rank-20: 69.14%., 
+ task: IR ->RGB:  mAP: 30.27% | Rank-1: 29.89% | Rank-5: 50.00% | Rank-10: 58.62% | Rank-20: 66.28%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 24: 894 clusters
+==> Statistics for RGB epoch 24: 944 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 08:40:18; Epoch: 24; loss_ir: 0.27570072;  loss_rgb: 3.3540356;  total_loss: 3.6297367;  ; 2.5000000000000004e-07
+Time: 2025-04-11 08:42:15; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.39% | Rank-1: 32.62% | Rank-5: 51.95% | Rank-10: 61.52% | Rank-20: 68.55%., 
+ task: IR ->RGB:  mAP: 30.68% | Rank-1: 30.65% | Rank-5: 50.38% | Rank-10: 58.62% | Rank-20: 67.05%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 25: 895 clusters
+==> Statistics for RGB epoch 25: 944 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 09:28:39; Epoch: 25; loss_ir: 0.2618039;  loss_rgb: 3.4319878;  total_loss: 3.6937914;  ; 2.5000000000000004e-07
+Time: 2025-04-11 09:30:38; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.57% | Rank-1: 33.20% | Rank-5: 52.73% | Rank-10: 60.55% | Rank-20: 69.14%., 
+ task: IR ->RGB:  mAP: 31.02% | Rank-1: 31.03% | Rank-5: 50.19% | Rank-10: 58.05% | Rank-20: 66.67%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 26: 880 clusters
+==> Statistics for RGB epoch 26: 935 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 10:20:32; Epoch: 26; loss_ir: 0.286947;  loss_rgb: 3.316061;  total_loss: 3.6030087;  ; 2.5000000000000004e-07
+Time: 2025-04-11 10:22:46; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.81% | Rank-1: 32.62% | Rank-5: 52.73% | Rank-10: 61.52% | Rank-20: 69.14%., 
+ task: IR ->RGB:  mAP: 30.44% | Rank-1: 30.08% | Rank-5: 50.00% | Rank-10: 58.24% | Rank-20: 65.71%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 27: 918 clusters
+==> Statistics for RGB epoch 27: 950 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 11:13:12; Epoch: 27; loss_ir: 0.2701178;  loss_rgb: 3.3272207;  total_loss: 3.597337;  ; 2.5000000000000004e-07
+Time: 2025-04-11 11:15:57; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 32.65% | Rank-1: 32.23% | Rank-5: 52.34% | Rank-10: 61.72% | Rank-20: 69.14%., 
+ task: IR ->RGB:  mAP: 30.67% | Rank-1: 30.84% | Rank-5: 50.38% | Rank-10: 59.77% | Rank-20: 66.48%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 28: 910 clusters
+==> Statistics for RGB epoch 28: 952 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 12:04:28; Epoch: 28; loss_ir: 0.29387555;  loss_rgb: 3.1803231;  total_loss: 3.4742002;  ; 2.5000000000000004e-07
+Time: 2025-04-11 12:06:20; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 33.13% | Rank-1: 33.40% | Rank-5: 52.54% | Rank-10: 62.11% | Rank-20: 69.34%., 
+ task: IR ->RGB:  mAP: 31.56% | Rank-1: 31.61% | Rank-5: 50.96% | Rank-10: 59.96% | Rank-20: 66.86%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 29: 894 clusters
+==> Statistics for RGB epoch 29: 933 clusters
+merge ir and rgb momery
+select_merge_data
+Time: 2025-04-11 12:21:50; Epoch: 29; loss_ir: 0.23903632;  loss_rgb: 3.6440418;  total_loss: 3.8830779;  ; 2.5000000000000004e-07
+Time: 2025-04-11 12:24:26; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 33.09% | Rank-1: 33.79% | Rank-5: 53.52% | Rank-10: 62.70% | Rank-20: 69.92%., 
+ task: IR ->RGB:  mAP: 31.33% | Rank-1: 31.23% | Rank-5: 52.30% | Rank-10: 60.15% | Rank-20: 67.82%.
+Total running time:1 day, 0:11:16.718541 
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/wangzj/datasets/', bupt_data_path='/data1/wangzj/datasets/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=400, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='bupt/debug/vcm2bupt_baseline', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=30, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0, eps=0.6, eps_gap=0.02, k1=30, k2=6, momentum=0.2, use_hard=False, temp=0.05, iters=200, workers=8, seq_lenth=6, c_learning_rate=0.0007, num_instances=4, pooling_type='gem', no_cam=False, eval_step=1)
+==> Load unlabeled dataset
+IR Clustering criterion: eps: 0.600
+RGB Clustering criterion: eps: 0.600
+==> Create pseudo labels for unlabeled RGB data
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/wangzj/datasets/', bupt_data_path='/data1/wangzj/datasets/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=400, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='bupt/debug/vcm2bupt_baseline', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=30, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0, eps=0.6, eps_gap=0.02, k1=30, k2=6, momentum=0.2, use_hard=False, temp=0.05, iters=200, workers=8, seq_lenth=6, c_learning_rate=0.0007, num_instances=4, pooling_type='gem', no_cam=False, eval_step=1)
+==> Load unlabeled dataset

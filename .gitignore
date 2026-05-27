@@ -1,0 +1,28 @@
+# Model checkpoints and weights
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Generated figures and result exports
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.tsv
+
+# Compressed artifacts
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# Python cache and local env files
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Editor metadata
+.vscode/

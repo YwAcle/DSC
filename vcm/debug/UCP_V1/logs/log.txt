@@ -1,0 +1,159 @@
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='vcm', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+Time: 2025-03-25 09:49:12; Epoch: 0; pid_loss: 6.214611;  pid_loss_proj: 6.213983;  tri_loss: 2.8742561;  tri_loss_proj: 0.8508996;  tri_loss_last: 0.72432584;  ide_loss_text: 0.62217623;  pid_loss_cue: 2.485591;  tri_loss_cue: 0.8237242;  pid_loss_rgb: 6.214714;  pid_loss_ir: 6.214674;  pid_loss_rgb_cue: 6.214713;  pid_loss_ir_cue: 6.2147326;  ; 2.5000000000000004e-07
+Time: 2025-03-25 09:52:14; Epoch: 1; pid_loss: 5.818115;  pid_loss_proj: 5.920367;  tri_loss: 0.4380218;  tri_loss_proj: 0.41478732;  tri_loss_last: 0.42743987;  ide_loss_text: 0.54859406;  pid_loss_cue: 2.3294716;  tri_loss_cue: 0.401192;  pid_loss_rgb: 6.196686;  pid_loss_ir: 6.1973815;  pid_loss_rgb_cue: 6.195311;  pid_loss_ir_cue: 6.1964135;  ; 8.5e-06
+Time: 2025-03-25 09:56:32; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 19.96% | Rank-1: 28.97% | Rank-5: 49.15% | Rank-10: 58.90% | Rank-20: 68.59%., 
+ task: RGB->IR :  mAP: 24.68% | Rank-1: 37.89% | Rank-5: 62.46% | Rank-10: 72.60% | Rank-20: 81.72%.
+Time: 2025-03-25 09:59:27; Epoch: 2; pid_loss: 4.970075;  pid_loss_proj: 5.2085676;  tri_loss: 0.3415371;  tri_loss_proj: 0.34287214;  tri_loss_last: 0.32448962;  ide_loss_text: 0.47986808;  pid_loss_cue: 2.0095484;  tri_loss_cue: 0.31683245;  pid_loss_rgb: 6.1413574;  pid_loss_ir: 6.1443567;  pid_loss_rgb_cue: 6.1397705;  pid_loss_ir_cue: 6.1425486;  ; 1.675e-05
+Time: 2025-03-25 10:02:21; Epoch: 3; pid_loss: 4.216813;  pid_loss_proj: 4.5007215;  tri_loss: 0.31602782;  tri_loss_proj: 0.31164104;  tri_loss_last: 0.29303992;  ide_loss_text: 0.43827716;  pid_loss_cue: 1.7526804;  tri_loss_cue: 0.2839081;  pid_loss_rgb: 6.0606112;  pid_loss_ir: 6.0682516;  pid_loss_rgb_cue: 6.0562463;  pid_loss_ir_cue: 6.0636497;  ; 2.4058009214827173e-05
+Time: 2025-03-25 10:06:28; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 34.50% | Rank-1: 45.77% | Rank-5: 63.63% | Rank-10: 71.82% | Rank-20: 79.04%., 
+ task: RGB->IR :  mAP: 33.75% | Rank-1: 50.76% | Rank-5: 72.68% | Rank-10: 80.25% | Rank-20: 86.25%.
+Time: 2025-03-25 10:09:20; Epoch: 4; pid_loss: 3.2524567;  pid_loss_proj: 3.6021488;  tri_loss: 0.23052615;  tri_loss_proj: 0.23879427;  tri_loss_last: 0.21908975;  ide_loss_text: 0.3816437;  pid_loss_cue: 1.4130732;  tri_loss_cue: 0.20277776;  pid_loss_rgb: 5.952805;  pid_loss_ir: 5.964497;  pid_loss_rgb_cue: 5.945188;  pid_loss_ir_cue: 5.9559007;  ; 2.334206437183243e-05
+Time: 2025-03-25 10:12:21; Epoch: 5; pid_loss: 2.396957;  pid_loss_proj: 2.7709415;  tri_loss: 0.18461242;  tri_loss_proj: 0.19698478;  tri_loss_last: 0.17958856;  ide_loss_text: 0.303536;  pid_loss_cue: 1.0869077;  tri_loss_cue: 0.15665941;  pid_loss_rgb: 5.8352256;  pid_loss_ir: 5.850731;  pid_loss_rgb_cue: 5.8207445;  pid_loss_ir_cue: 5.832392;  ; 2.2442747586104038e-05
+Time: 2025-03-25 10:16:34; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 44.87% | Rank-1: 57.74% | Rank-5: 74.52% | Rank-10: 81.52% | Rank-20: 87.28%., 
+ task: RGB->IR :  mAP: 43.13% | Rank-1: 60.25% | Rank-5: 77.84% | Rank-10: 84.04% | Rank-20: 88.96%.
+Time: 2025-03-25 10:19:41; Epoch: 6; pid_loss: 1.8144869;  pid_loss_proj: 2.154651;  tri_loss: 0.15793297;  tri_loss_proj: 0.17795007;  tri_loss_last: 0.15892437;  ide_loss_text: 0.24739051;  pid_loss_cue: 0.85818374;  tri_loss_cue: 0.13191433;  pid_loss_rgb: 5.732228;  pid_loss_ir: 5.7510924;  pid_loss_rgb_cue: 5.71014;  pid_loss_ir_cue: 5.726506;  ; 2.1375446417183525e-05
+Time: 2025-03-25 10:22:37; Epoch: 7; pid_loss: 1.371943;  pid_loss_proj: 1.6680369;  tri_loss: 0.11723812;  tri_loss_proj: 0.14770034;  tri_loss_last: 0.12717453;  ide_loss_text: 0.18969375;  pid_loss_cue: 0.67770165;  tri_loss_cue: 0.097839564;  pid_loss_rgb: 5.625023;  pid_loss_ir: 5.6529574;  pid_loss_rgb_cue: 5.5954905;  pid_loss_ir_cue: 5.6223397;  ; 2.015842268398292e-05
+Time: 2025-03-25 10:27:13; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 49.22% | Rank-1: 63.22% | Rank-5: 78.62% | Rank-10: 83.94% | Rank-20: 88.42%., 
+ task: RGB->IR :  mAP: 47.97% | Rank-1: 65.90% | Rank-5: 81.55% | Rank-10: 86.47% | Rank-20: 90.21%.
+Time: 2025-03-25 10:30:28; Epoch: 8; pid_loss: 1.0109435;  pid_loss_proj: 1.2715315;  tri_loss: 0.09459293;  tri_loss_proj: 0.12822191;  tri_loss_last: 0.110194415;  ide_loss_text: 0.13859384;  pid_loss_cue: 0.5241405;  tri_loss_cue: 0.07797216;  pid_loss_rgb: 5.524646;  pid_loss_ir: 5.54791;  pid_loss_rgb_cue: 5.489154;  pid_loss_ir_cue: 5.5100107;  ; 1.88125e-05
+Time: 2025-03-25 10:33:22; Epoch: 9; pid_loss: 0.81044614;  pid_loss_proj: 1.0261371;  tri_loss: 0.07740433;  tri_loss_proj: 0.11630048;  tri_loss_last: 0.094796695;  ide_loss_text: 0.1045107;  pid_loss_cue: 0.43197033;  tri_loss_cue: 0.060206607;  pid_loss_rgb: 5.4429016;  pid_loss_ir: 5.4744115;  pid_loss_rgb_cue: 5.4038477;  pid_loss_ir_cue: 5.434518;  ; 1.736070747551799e-05
+Time: 2025-03-25 10:37:39; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 49.25% | Rank-1: 60.19% | Rank-5: 75.68% | Rank-10: 81.50% | Rank-20: 86.67%., 
+ task: RGB->IR :  mAP: 49.19% | Rank-1: 63.95% | Rank-5: 79.68% | Rank-10: 84.74% | Rank-20: 88.90%.
+Time: 2025-03-25 10:40:46; Epoch: 10; pid_loss: 0.5842488;  pid_loss_proj: 0.7479946;  tri_loss: 0.06974566;  tri_loss_proj: 0.10670858;  tri_loss_last: 0.08681796;  ide_loss_text: 0.07317003;  pid_loss_cue: 0.3229761;  tri_loss_cue: 0.05194401;  pid_loss_rgb: 5.3522654;  pid_loss_ir: 5.3721986;  pid_loss_rgb_cue: 5.3065147;  pid_loss_ir_cue: 5.3250327;  ; 1.5827885683143694e-05
+Time: 2025-03-25 10:43:40; Epoch: 11; pid_loss: 0.47774348;  pid_loss_proj: 0.60978323;  tri_loss: 0.05503165;  tri_loss_proj: 0.09607309;  tri_loss_last: 0.0732047;  ide_loss_text: 0.050894763;  pid_loss_cue: 0.26659057;  tri_loss_cue: 0.04056353;  pid_loss_rgb: 5.2546983;  pid_loss_ir: 5.2765064;  pid_loss_rgb_cue: 5.2066746;  pid_loss_ir_cue: 5.22822;  ; 1.424026162872314e-05
+Time: 2025-03-25 10:48:02; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 53.89% | Rank-1: 65.42% | Rank-5: 78.80% | Rank-10: 84.12% | Rank-20: 88.63%., 
+ task: RGB->IR :  mAP: 52.63% | Rank-1: 66.88% | Rank-5: 81.94% | Rank-10: 86.59% | Rank-20: 90.21%.
+Time: 2025-03-25 10:50:59; Epoch: 12; pid_loss: 0.41661143;  pid_loss_proj: 0.5229279;  tri_loss: 0.048088152;  tri_loss_proj: 0.08794435;  tri_loss_last: 0.06815634;  ide_loss_text: 0.036626905;  pid_loss_cue: 0.23163871;  tri_loss_cue: 0.037521884;  pid_loss_rgb: 5.180959;  pid_loss_ir: 5.214095;  pid_loss_rgb_cue: 5.1347384;  pid_loss_ir_cue: 5.163717;  ; 1.2625e-05
+Time: 2025-03-25 10:54:00; Epoch: 13; pid_loss: 0.34455097;  pid_loss_proj: 0.4364785;  tri_loss: 0.04225505;  tri_loss_proj: 0.08088534;  tri_loss_last: 0.06199493;  ide_loss_text: 0.029121794;  pid_loss_cue: 0.19462669;  tri_loss_cue: 0.033888843;  pid_loss_rgb: 5.1193748;  pid_loss_ir: 5.1371994;  pid_loss_rgb_cue: 5.072584;  pid_loss_ir_cue: 5.085217;  ; 1.1009738371276861e-05
+Time: 2025-03-25 10:58:26; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 52.76% | Rank-1: 63.72% | Rank-5: 78.14% | Rank-10: 83.62% | Rank-20: 88.26%., 
+ task: RGB->IR :  mAP: 52.67% | Rank-1: 68.13% | Rank-5: 81.45% | Rank-10: 85.86% | Rank-20: 89.70%.
+Time: 2025-03-25 11:01:21; Epoch: 14; pid_loss: 0.28552252;  pid_loss_proj: 0.36057967;  tri_loss: 0.036376975;  tri_loss_proj: 0.0746994;  tri_loss_last: 0.054506548;  ide_loss_text: 0.020837916;  pid_loss_cue: 0.16256334;  tri_loss_cue: 0.02597129;  pid_loss_rgb: 5.0486145;  pid_loss_ir: 5.0782447;  pid_loss_rgb_cue: 4.999576;  pid_loss_ir_cue: 5.028578;  ; 9.422114316856307e-06
+Time: 2025-03-25 11:04:13; Epoch: 15; pid_loss: 0.2538099;  pid_loss_proj: 0.31786612;  tri_loss: 0.03470032;  tri_loss_proj: 0.070634104;  tri_loss_last: 0.054533962;  ide_loss_text: 0.018093908;  pid_loss_cue: 0.1435631;  tri_loss_cue: 0.027986322;  pid_loss_rgb: 5.016322;  pid_loss_ir: 5.0329294;  pid_loss_rgb_cue: 4.966434;  pid_loss_ir_cue: 4.9806275;  ; 7.889292524482017e-06
+Time: 2025-03-25 11:08:41; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 54.57% | Rank-1: 64.49% | Rank-5: 77.23% | Rank-10: 82.96% | Rank-20: 87.39%., 
+ task: RGB->IR :  mAP: 54.22% | Rank-1: 66.68% | Rank-5: 81.07% | Rank-10: 86.02% | Rank-20: 89.72%.
+Time: 2025-03-25 11:11:52; Epoch: 16; pid_loss: 0.188462;  pid_loss_proj: 0.24440193;  tri_loss: 0.02700523;  tri_loss_proj: 0.062277853;  tri_loss_last: 0.042815946;  ide_loss_text: 0.013240619;  pid_loss_cue: 0.10931476;  tri_loss_cue: 0.02018859;  pid_loss_rgb: 4.9457407;  pid_loss_ir: 4.974211;  pid_loss_rgb_cue: 4.8961267;  pid_loss_ir_cue: 4.9210215;  ; 6.437500000000003e-06
+Time: 2025-03-25 11:14:39; Epoch: 17; pid_loss: 0.17949517;  pid_loss_proj: 0.2282814;  tri_loss: 0.023804104;  tri_loss_proj: 0.058068667;  tri_loss_last: 0.038518965;  ide_loss_text: 0.011132264;  pid_loss_cue: 0.10216762;  tri_loss_cue: 0.018485798;  pid_loss_rgb: 4.9227967;  pid_loss_ir: 4.9608154;  pid_loss_rgb_cue: 4.8753276;  pid_loss_ir_cue: 4.9116564;  ; 5.091577316017082e-06
+Time: 2025-03-25 11:18:57; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 56.51% | Rank-1: 66.73% | Rank-5: 79.12% | Rank-10: 84.32% | Rank-20: 88.68%., 
+ task: RGB->IR :  mAP: 54.92% | Rank-1: 67.66% | Rank-5: 81.33% | Rank-10: 86.13% | Rank-20: 89.74%.
+Time: 2025-03-25 11:21:44; Epoch: 18; pid_loss: 0.15528545;  pid_loss_proj: 0.19678217;  tri_loss: 0.022183122;  tri_loss_proj: 0.056040496;  tri_loss_last: 0.037331957;  ide_loss_text: 0.010500266;  pid_loss_cue: 0.08697275;  tri_loss_cue: 0.01538749;  pid_loss_rgb: 4.890852;  pid_loss_ir: 4.9159055;  pid_loss_rgb_cue: 4.8470716;  pid_loss_ir_cue: 4.867013;  ; 3.874553582816475e-06
+Time: 2025-03-25 11:24:46; Epoch: 19; pid_loss: 0.14809895;  pid_loss_proj: 0.18755688;  tri_loss: 0.019405764;  tri_loss_proj: 0.0535184;  tri_loss_last: 0.03300796;  ide_loss_text: 0.008663146;  pid_loss_cue: 0.08278598;  tri_loss_cue: 0.014387544;  pid_loss_rgb: 4.8605504;  pid_loss_ir: 4.8798094;  pid_loss_rgb_cue: 4.8147483;  pid_loss_ir_cue: 4.834153;  ; 2.8072524138959667e-06
+Time: 2025-03-25 11:28:43; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 55.82% | Rank-1: 65.99% | Rank-5: 78.95% | Rank-10: 83.73% | Rank-20: 88.07%., 
+ task: RGB->IR :  mAP: 54.58% | Rank-1: 66.62% | Rank-5: 80.94% | Rank-10: 85.82% | Rank-20: 89.66%.
+Time: 2025-03-25 11:31:30; Epoch: 20; pid_loss: 0.15675841;  pid_loss_proj: 0.19694191;  tri_loss: 0.025910607;  tri_loss_proj: 0.057333898;  tri_loss_last: 0.042441607;  ide_loss_text: 0.008340051;  pid_loss_cue: 0.08751651;  tri_loss_cue: 0.02161796;  pid_loss_rgb: 4.8599567;  pid_loss_ir: 4.881581;  pid_loss_rgb_cue: 4.8159404;  pid_loss_ir_cue: 4.8353543;  ; 1.907935628167571e-06
+Time: 2025-03-25 11:34:24; Epoch: 21; pid_loss: 0.1406941;  pid_loss_proj: 0.17565884;  tri_loss: 0.01893797;  tri_loss_proj: 0.050304927;  tri_loss_last: 0.031479675;  ide_loss_text: 0.0077896104;  pid_loss_cue: 0.080683164;  tri_loss_cue: 0.01336563;  pid_loss_rgb: 4.832306;  pid_loss_ir: 4.865886;  pid_loss_rgb_cue: 4.7876945;  pid_loss_ir_cue: 4.821692;  ; 1.1919907851728266e-06
+Time: 2025-03-25 11:38:57; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 57.20% | Rank-1: 67.45% | Rank-5: 79.95% | Rank-10: 84.12% | Rank-20: 88.61%., 
+ task: RGB->IR :  mAP: 55.63% | Rank-1: 67.80% | Rank-5: 81.57% | Rank-10: 86.21% | Rank-20: 89.92%.
+Time: 2025-03-25 11:42:04; Epoch: 22; pid_loss: 0.12929173;  pid_loss_proj: 0.16422841;  tri_loss: 0.01722124;  tri_loss_proj: 0.050100803;  tri_loss_last: 0.03283298;  ide_loss_text: 0.007523393;  pid_loss_cue: 0.07183249;  tri_loss_cue: 0.012266533;  pid_loss_rgb: 4.824103;  pid_loss_ir: 4.8547583;  pid_loss_rgb_cue: 4.7798386;  pid_loss_ir_cue: 4.8086658;  ; 6.716678996727811e-07
+Time: 2025-03-25 11:45:03; Epoch: 23; pid_loss: 0.14826995;  pid_loss_proj: 0.18856023;  tri_loss: 0.023943508;  tri_loss_proj: 0.056419022;  tri_loss_last: 0.039578117;  ide_loss_text: 0.00791403;  pid_loss_cue: 0.0840141;  tri_loss_cue: 0.022206055;  pid_loss_rgb: 4.8521605;  pid_loss_ir: 4.878896;  pid_loss_rgb_cue: 4.8066187;  pid_loss_ir_cue: 4.8315063;  ; 3.5586984049909656e-07
+Time: 2025-03-25 11:49:24; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 56.99% | Rank-1: 66.91% | Rank-5: 79.49% | Rank-10: 84.32% | Rank-20: 88.59%., 
+ task: RGB->IR :  mAP: 55.64% | Rank-1: 67.90% | Rank-5: 81.41% | Rank-10: 86.37% | Rank-20: 89.65%.
+
+
+
+
+Namespace(cuda='cuda', mode='test', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', STH_start_layer=9, prompt_index=3, resume_test_model='/data1/wangzj/oringinal/DA/vcm/debug/UCP_V1/models', train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+
+
+
+
+Namespace(cuda='cuda', mode='test', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', STH_start_layer=9, prompt_index=3, resume_test_model='vcm/debug/UCP_V1/models', train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+Time: 2025-03-25 14:44:50; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 22.17% | Rank-1: 18.36% | Rank-5: 37.30% | Rank-10: 46.09% | Rank-20: 52.73%., 
+ task: IR ->RGB:  mAP: 16.43% | Rank-1: 14.18% | Rank-5: 28.54% | Rank-10: 35.44% | Rank-20: 44.83%.
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='vcm', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+Time: 2025-03-25 14:48:18; Epoch: 0; pid_loss: 6.214605;  pid_loss_proj: 6.2139783;  tri_loss: 2.873387;  tri_loss_proj: 0.85071766;  tri_loss_last: 0.7242361;  ide_loss_text: 0.62212205;  pid_loss_cue: 2.4855814;  tri_loss_cue: 0.8238915;  pid_loss_rgb: 6.2142954;  pid_loss_ir: 6.2132177;  pid_loss_rgb_cue: 6.214164;  pid_loss_ir_cue: 6.2138844;  ; 2.5000000000000004e-07
+Time: 2025-03-25 14:51:20; Epoch: 1; pid_loss: 5.807822;  pid_loss_proj: 5.913753;  tri_loss: 0.4458933;  tri_loss_proj: 0.41631413;  tri_loss_last: 0.43582615;  ide_loss_text: 0.5503612;  pid_loss_cue: 2.325533;  tri_loss_cue: 0.4067401;  pid_loss_rgb: 5.785255;  pid_loss_ir: 5.8045006;  pid_loss_rgb_cue: 5.779587;  pid_loss_ir_cue: 5.798648;  ; 8.5e-06
+Time: 2025-03-25 14:55:28; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 18.99% | Rank-1: 27.86% | Rank-5: 47.60% | Rank-10: 57.72% | Rank-20: 68.19%., 
+ task: RGB->IR :  mAP: 24.16% | Rank-1: 36.99% | Rank-5: 60.54% | Rank-10: 70.46% | Rank-20: 79.58%.
+Time: 2025-03-25 14:58:27; Epoch: 2; pid_loss: 4.94663;  pid_loss_proj: 5.1983128;  tri_loss: 0.35698768;  tri_loss_proj: 0.3544148;  tri_loss_last: 0.34689918;  ide_loss_text: 0.4836994;  pid_loss_cue: 2.0047116;  tri_loss_cue: 0.34279358;  pid_loss_rgb: 4.7773266;  pid_loss_ir: 4.887537;  pid_loss_rgb_cue: 4.8097205;  pid_loss_ir_cue: 4.9372997;  ; 1.675e-05
+Time: 2025-03-25 15:01:28; Epoch: 3; pid_loss: 4.1571364;  pid_loss_proj: 4.467213;  tri_loss: 0.3535864;  tri_loss_proj: 0.3369567;  tri_loss_last: 0.3259928;  ide_loss_text: 0.4447034;  pid_loss_cue: 1.7251507;  tri_loss_cue: 0.33072513;  pid_loss_rgb: 3.7052257;  pid_loss_ir: 3.986202;  pid_loss_rgb_cue: 3.8454213;  pid_loss_ir_cue: 4.1327825;  ; 2.4058009214827173e-05
+Time: 2025-03-25 15:05:35; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 33.70% | Rank-1: 44.50% | Rank-5: 62.61% | Rank-10: 70.68% | Rank-20: 77.53%., 
+ task: RGB->IR :  mAP: 34.00% | Rank-1: 50.23% | Rank-5: 70.52% | Rank-10: 78.17% | Rank-20: 84.98%.
+Time: 2025-03-25 15:08:35; Epoch: 4; pid_loss: 3.1122508;  pid_loss_proj: 3.5122402;  tri_loss: 0.27328825;  tri_loss_proj: 0.266659;  tri_loss_last: 0.25740662;  ide_loss_text: 0.38118464;  pid_loss_cue: 1.3335779;  tri_loss_cue: 0.25936309;  pid_loss_rgb: 2.5003428;  pid_loss_ir: 2.827459;  pid_loss_rgb_cue: 2.692093;  pid_loss_ir_cue: 3.0333223;  ; 2.334206437183243e-05
+Time: 2025-03-25 15:11:36; Epoch: 5; pid_loss: 2.2292233;  pid_loss_proj: 2.6520464;  tri_loss: 0.2276539;  tri_loss_proj: 0.23114644;  tri_loss_last: 0.22343516;  ide_loss_text: 0.30252737;  pid_loss_cue: 0.9763529;  tri_loss_cue: 0.2220665;  pid_loss_rgb: 1.6084875;  pid_loss_ir: 1.8905838;  pid_loss_rgb_cue: 1.7706265;  pid_loss_ir_cue: 2.0613003;  ; 2.2442747586104038e-05
+Time: 2025-03-25 15:15:40; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 43.05% | Rank-1: 56.20% | Rank-5: 73.15% | Rank-10: 79.69% | Rank-20: 85.23%., 
+ task: RGB->IR :  mAP: 42.45% | Rank-1: 59.62% | Rank-5: 76.94% | Rank-10: 83.02% | Rank-20: 88.17%.
+Time: 2025-03-25 15:18:42; Epoch: 6; pid_loss: 1.6270576;  pid_loss_proj: 2.0206969;  tri_loss: 0.20045528;  tri_loss_proj: 0.21038243;  tri_loss_last: 0.20052072;  ide_loss_text: 0.24734859;  pid_loss_cue: 0.7262415;  tri_loss_cue: 0.18933931;  pid_loss_rgb: 1.0367213;  pid_loss_ir: 1.2851073;  pid_loss_rgb_cue: 1.1600499;  pid_loss_ir_cue: 1.417656;  ; 2.1375446417183525e-05
+Time: 2025-03-25 15:21:46; Epoch: 7; pid_loss: 1.2049726;  pid_loss_proj: 1.5400403;  tri_loss: 0.1561693;  tri_loss_proj: 0.18499519;  tri_loss_last: 0.16785577;  ide_loss_text: 0.18805344;  pid_loss_cue: 0.5436954;  tri_loss_cue: 0.146228;  pid_loss_rgb: 0.71598953;  pid_loss_ir: 0.90906507;  pid_loss_rgb_cue: 0.79730177;  pid_loss_ir_cue: 1.0192547;  ; 2.015842268398292e-05
+Time: 2025-03-25 15:25:47; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 46.71% | Rank-1: 61.80% | Rank-5: 77.90% | Rank-10: 83.94% | Rank-20: 88.50%., 
+ task: RGB->IR :  mAP: 46.45% | Rank-1: 65.31% | Rank-5: 80.51% | Rank-10: 85.74% | Rank-20: 90.19%.
+Time: 2025-03-25 15:28:48; Epoch: 8; pid_loss: 0.85932565;  pid_loss_proj: 1.153457;  tri_loss: 0.1319392;  tri_loss_proj: 0.16402906;  tri_loss_last: 0.14787537;  ide_loss_text: 0.136927;  pid_loss_cue: 0.39168823;  tri_loss_cue: 0.12055269;  pid_loss_rgb: 0.5049881;  pid_loss_ir: 0.6100659;  pid_loss_rgb_cue: 0.55491537;  pid_loss_ir_cue: 0.69833726;  ; 1.88125e-05
+Time: 2025-03-25 15:31:52; Epoch: 9; pid_loss: 0.6317756;  pid_loss_proj: 0.88319564;  tri_loss: 0.11303224;  tri_loss_proj: 0.1518502;  tri_loss_last: 0.13211897;  ide_loss_text: 0.10547918;  pid_loss_cue: 0.285679;  tri_loss_cue: 0.10515155;  pid_loss_rgb: 0.34770727;  pid_loss_ir: 0.4248448;  pid_loss_rgb_cue: 0.38118052;  pid_loss_ir_cue: 0.46608183;  ; 1.736070747551799e-05
+Time: 2025-03-25 15:35:53; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 49.24% | Rank-1: 61.58% | Rank-5: 77.09% | Rank-10: 82.33% | Rank-20: 87.00%., 
+ task: RGB->IR :  mAP: 49.34% | Rank-1: 66.33% | Rank-5: 80.70% | Rank-10: 85.94% | Rank-20: 90.19%.
+Time: 2025-03-25 15:38:51; Epoch: 10; pid_loss: 0.46809608;  pid_loss_proj: 0.65373945;  tri_loss: 0.099071175;  tri_loss_proj: 0.140837;  tri_loss_last: 0.120231174;  ide_loss_text: 0.07167593;  pid_loss_cue: 0.20712471;  tri_loss_cue: 0.09193234;  pid_loss_rgb: 0.26726645;  pid_loss_ir: 0.2977726;  pid_loss_rgb_cue: 0.28888106;  pid_loss_ir_cue: 0.31136036;  ; 1.5827885683143694e-05
+Time: 2025-03-25 15:41:49; Epoch: 11; pid_loss: 0.3804245;  pid_loss_proj: 0.5412771;  tri_loss: 0.08718949;  tri_loss_proj: 0.1313724;  tri_loss_last: 0.105615765;  ide_loss_text: 0.052855544;  pid_loss_cue: 0.1662539;  tri_loss_cue: 0.078224145;  pid_loss_rgb: 0.22636482;  pid_loss_ir: 0.23391888;  pid_loss_rgb_cue: 0.23575214;  pid_loss_ir_cue: 0.24209575;  ; 1.424026162872314e-05
+Time: 2025-03-25 15:45:57; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 52.51% | Rank-1: 66.51% | Rank-5: 80.28% | Rank-10: 84.79% | Rank-20: 89.05%., 
+ task: RGB->IR :  mAP: 51.81% | Rank-1: 68.05% | Rank-5: 81.55% | Rank-10: 86.55% | Rank-20: 90.15%.
+Time: 2025-03-25 15:49:00; Epoch: 12; pid_loss: 0.3307206;  pid_loss_proj: 0.45381823;  tri_loss: 0.07821331;  tri_loss_proj: 0.124376945;  tri_loss_last: 0.09936324;  ide_loss_text: 0.038605295;  pid_loss_cue: 0.14173493;  tri_loss_cue: 0.07254307;  pid_loss_rgb: 0.20048892;  pid_loss_ir: 0.18291;  pid_loss_rgb_cue: 0.21172708;  pid_loss_ir_cue: 0.17876492;  ; 1.2625e-05
+Time: 2025-03-25 15:52:04; Epoch: 13; pid_loss: 0.28523916;  pid_loss_proj: 0.40032062;  tri_loss: 0.07301373;  tri_loss_proj: 0.11921227;  tri_loss_last: 0.09379077;  ide_loss_text: 0.03155961;  pid_loss_cue: 0.12113228;  tri_loss_cue: 0.064545415;  pid_loss_rgb: 0.17140213;  pid_loss_ir: 0.16637626;  pid_loss_rgb_cue: 0.1755072;  pid_loss_ir_cue: 0.17271867;  ; 1.1009738371276861e-05
+Time: 2025-03-25 15:55:59; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 52.54% | Rank-1: 64.62% | Rank-5: 78.77% | Rank-10: 84.34% | Rank-20: 89.20%., 
+ task: RGB->IR :  mAP: 52.14% | Rank-1: 68.17% | Rank-5: 82.39% | Rank-10: 87.72% | Rank-20: 91.21%.
+Time: 2025-03-25 15:59:00; Epoch: 14; pid_loss: 0.22325116;  pid_loss_proj: 0.32007346;  tri_loss: 0.0641877;  tri_loss_proj: 0.11078692;  tri_loss_last: 0.08521969;  ide_loss_text: 0.021755708;  pid_loss_cue: 0.09270625;  tri_loss_cue: 0.05563939;  pid_loss_rgb: 0.14264913;  pid_loss_ir: 0.13448739;  pid_loss_rgb_cue: 0.14425279;  pid_loss_ir_cue: 0.1328663;  ; 9.422114316856307e-06
+Time: 2025-03-25 16:01:59; Epoch: 15; pid_loss: 0.1947052;  pid_loss_proj: 0.27339122;  tri_loss: 0.059681784;  tri_loss_proj: 0.10373165;  tri_loss_last: 0.083440214;  ide_loss_text: 0.018178908;  pid_loss_cue: 0.083102174;  tri_loss_cue: 0.053755887;  pid_loss_rgb: 0.12323247;  pid_loss_ir: 0.10645979;  pid_loss_rgb_cue: 0.1343635;  pid_loss_ir_cue: 0.10775383;  ; 7.889292524482017e-06
+Time: 2025-03-25 16:06:04; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 55.07% | Rank-1: 67.91% | Rank-5: 81.30% | Rank-10: 85.82% | Rank-20: 89.79%., 
+ task: RGB->IR :  mAP: 54.09% | Rank-1: 69.97% | Rank-5: 83.64% | Rank-10: 88.17% | Rank-20: 91.74%.
+Time: 2025-03-25 16:09:07; Epoch: 16; pid_loss: 0.14328623;  pid_loss_proj: 0.21342655;  tri_loss: 0.04783864;  tri_loss_proj: 0.094045796;  tri_loss_last: 0.0678325;  ide_loss_text: 0.013131833;  pid_loss_cue: 0.060030024;  tri_loss_cue: 0.042927988;  pid_loss_rgb: 0.092356965;  pid_loss_ir: 0.07671763;  pid_loss_rgb_cue: 0.0941185;  pid_loss_ir_cue: 0.074267425;  ; 6.437500000000003e-06
+Time: 2025-03-25 16:12:06; Epoch: 17; pid_loss: 0.13537733;  pid_loss_proj: 0.19784418;  tri_loss: 0.0445882;  tri_loss_proj: 0.09048006;  tri_loss_last: 0.06656676;  ide_loss_text: 0.011398771;  pid_loss_cue: 0.05624484;  tri_loss_cue: 0.04087184;  pid_loss_rgb: 0.075380355;  pid_loss_ir: 0.09309059;  pid_loss_rgb_cue: 0.07454849;  pid_loss_ir_cue: 0.091063485;  ; 5.091577316017082e-06
+Time: 2025-03-25 16:16:01; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 56.70% | Rank-1: 69.39% | Rank-5: 82.07% | Rank-10: 86.67% | Rank-20: 90.53%., 
+ task: RGB->IR :  mAP: 55.04% | Rank-1: 70.76% | Rank-5: 83.96% | Rank-10: 88.86% | Rank-20: 92.04%.
+Time: 2025-03-25 16:19:00; Epoch: 18; pid_loss: 0.11159042;  pid_loss_proj: 0.16507806;  tri_loss: 0.03892289;  tri_loss_proj: 0.08506131;  tri_loss_last: 0.059754297;  ide_loss_text: 0.010505642;  pid_loss_cue: 0.04539521;  tri_loss_cue: 0.03509323;  pid_loss_rgb: 0.069969706;  pid_loss_ir: 0.07546468;  pid_loss_rgb_cue: 0.068961985;  pid_loss_ir_cue: 0.07291662;  ; 3.874553582816475e-06
+Time: 2025-03-25 16:21:56; Epoch: 19; pid_loss: 0.10700646;  pid_loss_proj: 0.15960376;  tri_loss: 0.03603603;  tri_loss_proj: 0.08160594;  tri_loss_last: 0.05594927;  ide_loss_text: 0.008488506;  pid_loss_cue: 0.04391088;  tri_loss_cue: 0.03151856;  pid_loss_rgb: 0.07023769;  pid_loss_ir: 0.057485428;  pid_loss_rgb_cue: 0.06589499;  pid_loss_ir_cue: 0.055905785;  ; 2.8072524138959667e-06
+Time: 2025-03-25 16:26:31; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 57.21% | Rank-1: 69.94% | Rank-5: 83.01% | Rank-10: 87.19% | Rank-20: 90.82%., 
+ task: RGB->IR :  mAP: 55.75% | Rank-1: 71.46% | Rank-5: 84.25% | Rank-10: 89.21% | Rank-20: 91.98%.
+Time: 2025-03-25 16:29:27; Epoch: 20; pid_loss: 0.1129673;  pid_loss_proj: 0.16550823;  tri_loss: 0.0416973;  tri_loss_proj: 0.08657849;  tri_loss_last: 0.06445491;  ide_loss_text: 0.008415428;  pid_loss_cue: 0.045672435;  tri_loss_cue: 0.03916136;  pid_loss_rgb: 0.082715176;  pid_loss_ir: 0.055964675;  pid_loss_rgb_cue: 0.08544283;  pid_loss_ir_cue: 0.051024474;  ; 1.907935628167571e-06
+Time: 2025-03-25 16:32:31; Epoch: 21; pid_loss: 0.10268911;  pid_loss_proj: 0.15192637;  tri_loss: 0.036049448;  tri_loss_proj: 0.079202265;  tri_loss_last: 0.05517934;  ide_loss_text: 0.0079097515;  pid_loss_cue: 0.04291765;  tri_loss_cue: 0.030831989;  pid_loss_rgb: 0.06359831;  pid_loss_ir: 0.06171356;  pid_loss_rgb_cue: 0.06425045;  pid_loss_ir_cue: 0.05980354;  ; 1.1919907851728266e-06
+Time: 2025-03-25 16:37:57; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 58.44% | Rank-1: 71.44% | Rank-5: 83.57% | Rank-10: 87.91% | Rank-20: 91.23%., 
+ task: RGB->IR :  mAP: 56.57% | Rank-1: 72.64% | Rank-5: 85.02% | Rank-10: 89.61% | Rank-20: 92.31%.
+Time: 2025-03-25 16:41:11; Epoch: 22; pid_loss: 0.09275978;  pid_loss_proj: 0.1379921;  tri_loss: 0.03493216;  tri_loss_proj: 0.079169735;  tri_loss_last: 0.056821685;  ide_loss_text: 0.0075401566;  pid_loss_cue: 0.03713471;  tri_loss_cue: 0.032066118;  pid_loss_rgb: 0.054215986;  pid_loss_ir: 0.058516476;  pid_loss_rgb_cue: 0.053970836;  pid_loss_ir_cue: 0.056643292;  ; 6.716678996727811e-07
+Time: 2025-03-25 16:44:25; Epoch: 23; pid_loss: 0.101041906;  pid_loss_proj: 0.1546474;  tri_loss: 0.03969475;  tri_loss_proj: 0.08527798;  tri_loss_last: 0.060717672;  ide_loss_text: 0.008015648;  pid_loss_cue: 0.041407514;  tri_loss_cue: 0.03719181;  pid_loss_rgb: 0.0642102;  pid_loss_ir: 0.06287402;  pid_loss_rgb_cue: 0.06321238;  pid_loss_ir_cue: 0.058118694;  ; 3.5586984049909656e-07
+Time: 2025-03-25 16:48:54; Test on Dataset: vcm, 
+ task: IR ->RGB:  mAP: 58.15% | Rank-1: 70.66% | Rank-5: 83.38% | Rank-10: 87.98% | Rank-20: 91.27%., 
+ task: RGB->IR :  mAP: 56.58% | Rank-1: 72.60% | Rank-5: 84.84% | Rank-10: 89.57% | Rank-20: 92.39%.
+
+
+
+
+Namespace(cuda='cuda', mode='test', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', STH_start_layer=9, prompt_index=3, resume_test_model='vcm/debug/UCP_V1/models', train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+Time: 2025-03-25 16:53:14; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 26.82% | Rank-1: 25.20% | Rank-5: 44.34% | Rank-10: 54.10% | Rank-20: 59.77%., 
+ task: IR ->RGB:  mAP: 19.85% | Rank-1: 19.16% | Rank-5: 32.38% | Rank-10: 40.61% | Rank-20: 50.57%.
+
+
+
+
+Namespace(cuda='cuda', mode='test', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/ls/data/HITSZ-VCM/', bupt_data_path='/data1/ls/data/BUPTCampus/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=200, learning_rate=2.5e-05, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='vcm/debug/UCP_V1', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=24, eval_epoch=2, vcm_test_mode='t2v', STH_start_layer=9, prompt_index=3, resume_test_model='vcm/debug/UCP_V1/models', train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0)
+Time: 2025-04-01 19:25:02; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 26.82% | Rank-1: 25.20% | Rank-5: 44.34% | Rank-10: 54.10% | Rank-20: 59.77%., 
+ task: IR ->RGB:  mAP: 19.85% | Rank-1: 19.16% | Rank-5: 32.38% | Rank-10: 40.61% | Rank-20: 50.57%.

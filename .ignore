@@ -1,0 +1,20 @@
+# Keep local search tools aligned with Git ignore rules for generated artifacts.
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.tsv
+*.gz
+*.zip
+*.tar
+*.tar.gz
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.vscode/

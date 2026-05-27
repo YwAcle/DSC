@@ -1,0 +1,374 @@
+
+
+
+
+Namespace(cuda='cuda', mode='train', module='video_B_tri', dataset='bupt', vcm_data_path='/data1/wangzj/datasets/', bupt_data_path='/data1/wangzj/datasets/', batch_size=4, num_pos=4, cls_cue=True, prompt_cue=True, img_w=144, img_h=288, test_batch=32, seed=1, pid_num=500, steps=400, learning_rate=0.00025, lr_times=25, num_workers=8, lower=0.02, upper=0.4, ratio=0.3, weight_decay=0.0001, output_path='bupt/debug/vcm2bupt_m2_ablation', max_save_model_num=1, resume_train_epoch=-1, auto_resume_training_from_lastest_step=False, total_train_epoch=50, eval_epoch=2, vcm_test_mode='t2v', resume_test_model=119, STH_start_layer=9, prompt_index=3, train_frame_sample='random', sequence_length=6, random_flip=True, fake=False, test_frame_sample='uniform', test_sampler='ConsistentModalitySampler', test_bs=64, train_sampler='RandomIdentitySampler', train_bs=16, train_sampler_nc=2, train_sampler_nt=1, max_rank=20, weight_a=0.08, weight_b=0.4, weight_c=1.0, eps=0.6, eps_gap=0.02, k1=30, k2=6, momentum=0.2, use_hard=False, temp=0.05, workers=8, seq_lenth=6, num_instances=4, pooling_type='gem', no_cam=False, hm=0, ht=10, hm_thresh=0.75, ht_thresh=0.75, topk=25)
+==> Load unlabeled dataset
+IR Clustering criterion: eps: 0.600
+RGB Clustering criterion: eps: 0.600
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 0: 785 clusters, Clustering Accuracy: 0.9282
+==> Statistics for RGB epoch 0: 871 clusters, Clustering Accuracy: 0.9372
+Time: 2025-07-01 10:15:31; Epoch: 0; loss_ir: 5.1414576;  loss_rgb: 3.082689;  loss_ir_frame: 2.1779163;  loss_rgb_frame: 1.4036772;  loss_neibor_rgb_rgb: 4.5618105;  loss_neibor_rgb_rgb_frame: 0.752587;  loss_neibor_ir_ir: 4.919831;  loss_neibor_ir_ir_frame: 0.811109;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [22.85107];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 1: 881 clusters, Clustering Accuracy: 0.9301
+==> Statistics for RGB epoch 1: 917 clusters, Clustering Accuracy: 0.9391
+Time: 2025-07-01 10:25:54; Epoch: 1; loss_ir: 1.9549305;  loss_rgb: 1.1985872;  loss_ir_frame: 0.3747498;  loss_rgb_frame: 0.30735424;  loss_neibor_rgb_rgb: 5.9864;  loss_neibor_rgb_rgb_frame: 0.75586593;  loss_neibor_ir_ir: 6.744291;  loss_neibor_ir_ir_frame: 0.9023969;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [18.224588];  ; 2.5e-06
+Time: 2025-07-01 10:27:22; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 27.86% | Rank-1: 26.17% | Rank-5: 45.31% | Rank-10: 54.49% | Rank-20: 62.50%., 
+ task: IR ->RGB:  mAP: 26.17% | Rank-1: 24.14% | Rank-5: 41.57% | Rank-10: 50.57% | Rank-20: 60.73%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 2: 910 clusters, Clustering Accuracy: 0.9348
+==> Statistics for RGB epoch 2: 931 clusters, Clustering Accuracy: 0.9423
+Time: 2025-07-01 10:37:29; Epoch: 2; loss_ir: 1.7035676;  loss_rgb: 1.1159763;  loss_ir_frame: 0.24856609;  loss_rgb_frame: 0.25457913;  loss_neibor_rgb_rgb: 6.2217784;  loss_neibor_rgb_rgb_frame: 0.8593377;  loss_neibor_ir_ir: 7.140822;  loss_neibor_ir_ir_frame: 1.0147798;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [18.559412];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 3: 922 clusters, Clustering Accuracy: 0.9473
+==> Statistics for RGB epoch 3: 951 clusters, Clustering Accuracy: 0.9446
+Time: 2025-07-01 10:47:56; Epoch: 3; loss_ir: 1.6893296;  loss_rgb: 1.1291134;  loss_ir_frame: 0.20019914;  loss_rgb_frame: 0.22330192;  loss_neibor_rgb_rgb: 6.033764;  loss_neibor_rgb_rgb_frame: 0.80944645;  loss_neibor_ir_ir: 6.8587584;  loss_neibor_ir_ir_frame: 0.92291754;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [17.866825];  ; 2.5e-06
+Time: 2025-07-01 10:49:24; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 29.46% | Rank-1: 27.93% | Rank-5: 48.05% | Rank-10: 57.62% | Rank-20: 65.04%., 
+ task: IR ->RGB:  mAP: 25.80% | Rank-1: 25.29% | Rank-5: 41.57% | Rank-10: 49.43% | Rank-20: 59.20%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 4: 948 clusters, Clustering Accuracy: 0.9417
+==> Statistics for RGB epoch 4: 960 clusters, Clustering Accuracy: 0.9421
+Time: 2025-07-01 11:01:51; Epoch: 4; loss_ir: 1.8860873;  loss_rgb: 1.1412498;  loss_ir_frame: 0.24157177;  loss_rgb_frame: 0.22856298;  loss_neibor_rgb_rgb: 5.2050467;  loss_neibor_rgb_rgb_frame: 0.59134775;  loss_neibor_ir_ir: 6.0392113;  loss_neibor_ir_ir_frame: 0.72581184;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [16.05889];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 5: 931 clusters, Clustering Accuracy: 0.9400
+==> Statistics for RGB epoch 5: 983 clusters, Clustering Accuracy: 0.9462
+Time: 2025-07-01 11:12:37; Epoch: 5; loss_ir: 1.6661611;  loss_rgb: 1.0663397;  loss_ir_frame: 0.2352469;  loss_rgb_frame: 0.19156891;  loss_neibor_rgb_rgb: 6.158232;  loss_neibor_rgb_rgb_frame: 0.85665816;  loss_neibor_ir_ir: 7.089081;  loss_neibor_ir_ir_frame: 0.99144024;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [18.254728];  ; 2.5e-06
+Time: 2025-07-01 11:14:06; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 28.09% | Rank-1: 26.37% | Rank-5: 47.07% | Rank-10: 55.08% | Rank-20: 64.06%., 
+ task: IR ->RGB:  mAP: 24.61% | Rank-1: 23.37% | Rank-5: 39.85% | Rank-10: 47.89% | Rank-20: 58.24%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 6: 932 clusters, Clustering Accuracy: 0.9417
+==> Statistics for RGB epoch 6: 978 clusters, Clustering Accuracy: 0.9418
+Time: 2025-07-01 11:24:57; Epoch: 6; loss_ir: 1.907098;  loss_rgb: 1.2313085;  loss_ir_frame: 0.21614943;  loss_rgb_frame: 0.18042374;  loss_neibor_rgb_rgb: 5.2545867;  loss_neibor_rgb_rgb_frame: 0.59873986;  loss_neibor_ir_ir: 5.9114556;  loss_neibor_ir_ir_frame: 0.71862173;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [16.018381];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 7: 934 clusters, Clustering Accuracy: 0.9387
+==> Statistics for RGB epoch 7: 985 clusters, Clustering Accuracy: 0.9418
+Time: 2025-07-01 11:35:16; Epoch: 7; loss_ir: 1.7138952;  loss_rgb: 1.1294847;  loss_ir_frame: 0.23555817;  loss_rgb_frame: 0.20342493;  loss_neibor_rgb_rgb: 5.499558;  loss_neibor_rgb_rgb_frame: 0.69647294;  loss_neibor_ir_ir: 6.545603;  loss_neibor_ir_ir_frame: 0.87303406;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [16.897034];  ; 2.5e-06
+Time: 2025-07-01 11:36:43; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 26.87% | Rank-1: 25.59% | Rank-5: 43.36% | Rank-10: 51.76% | Rank-20: 62.70%., 
+ task: IR ->RGB:  mAP: 23.21% | Rank-1: 21.46% | Rank-5: 37.93% | Rank-10: 47.32% | Rank-20: 57.09%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 8: 951 clusters, Clustering Accuracy: 0.9407
+==> Statistics for RGB epoch 8: 982 clusters, Clustering Accuracy: 0.9454
+Time: 2025-07-01 11:47:12; Epoch: 8; loss_ir: 1.5762836;  loss_rgb: 1.1082186;  loss_ir_frame: 0.21171308;  loss_rgb_frame: 0.17172338;  loss_neibor_rgb_rgb: 6.2415013;  loss_neibor_rgb_rgb_frame: 0.8735483;  loss_neibor_ir_ir: 7.2627335;  loss_neibor_ir_ir_frame: 1.0371646;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [18.482887];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 9: 946 clusters, Clustering Accuracy: 0.9413
+==> Statistics for RGB epoch 9: 982 clusters, Clustering Accuracy: 0.9462
+Time: 2025-07-01 11:58:55; Epoch: 9; loss_ir: 1.914346;  loss_rgb: 1.1638222;  loss_ir_frame: 0.22223325;  loss_rgb_frame: 0.14782444;  loss_neibor_rgb_rgb: 4.991206;  loss_neibor_rgb_rgb_frame: 0.55948955;  loss_neibor_ir_ir: 5.665609;  loss_neibor_ir_ir_frame: 0.6642209;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [15.328753];  ; 2.5e-06
+Time: 2025-07-01 12:00:21; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 27.26% | Rank-1: 25.98% | Rank-5: 46.68% | Rank-10: 53.91% | Rank-20: 61.91%., 
+ task: IR ->RGB:  mAP: 25.22% | Rank-1: 23.37% | Rank-5: 42.53% | Rank-10: 51.53% | Rank-20: 59.96%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 10: 759 clusters, Clustering Accuracy: 0.7882
+==> Statistics for RGB epoch 10: 812 clusters, Clustering Accuracy: 0.8089
+==> Updated Statistics for RGB epoch 10: 512 clusters after cross-modal interaction
+Time: 2025-07-01 12:21:12; Epoch: 10; loss_ir: 1.8460134;  loss_rgb: 1.925053;  loss_ir_frame: 1.0588729;  loss_rgb_frame: 1.5501734;  loss_neibor_rgb_rgb: 6.4982104;  loss_neibor_rgb_rgb_frame: 0.56586343;  loss_neibor_ir_ir: 7.966661;  loss_neibor_ir_ir_frame: 0.8243001;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 9.042144;  loss_neibor_rgb_ir_frame: 2.0071242;  total_loss: [9.07054];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 11: 723 clusters, Clustering Accuracy: 0.7659
+==> Statistics for RGB epoch 11: 779 clusters, Clustering Accuracy: 0.7836
+==> Updated Statistics for RGB epoch 11: 481 clusters after cross-modal interaction
+Time: 2025-07-01 12:31:39; Epoch: 11; loss_ir: 1.292323;  loss_rgb: 1.5974238;  loss_ir_frame: 0.9683569;  loss_rgb_frame: 1.4723451;  loss_neibor_rgb_rgb: 7.8563304;  loss_neibor_rgb_rgb_frame: 0.9120214;  loss_neibor_ir_ir: 9.315248;  loss_neibor_ir_ir_frame: 0.99602604;  loss_neibor_ir_rgb: 10.511941;  loss_neibor_ir_rgb_frame: 2.0293791;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [8.492551];  ; 2.5e-06
+Time: 2025-07-01 12:33:08; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 31.60% | Rank-1: 30.08% | Rank-5: 53.71% | Rank-10: 60.94% | Rank-20: 66.60%., 
+ task: IR ->RGB:  mAP: 32.17% | Rank-1: 30.84% | Rank-5: 53.26% | Rank-10: 62.07% | Rank-20: 70.11%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 12: 737 clusters, Clustering Accuracy: 0.7774
+==> Statistics for RGB epoch 12: 786 clusters, Clustering Accuracy: 0.7863
+==> Updated Statistics for RGB epoch 12: 507 clusters after cross-modal interaction
+Time: 2025-07-01 12:43:41; Epoch: 12; loss_ir: 1.2185639;  loss_rgb: 1.6105801;  loss_ir_frame: 0.87513846;  loss_rgb_frame: 1.4818515;  loss_neibor_rgb_rgb: 8.507003;  loss_neibor_rgb_rgb_frame: 1.0310127;  loss_neibor_ir_ir: 9.80198;  loss_neibor_ir_ir_frame: 1.0593741;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.060762;  loss_neibor_rgb_ir_frame: 2.132834;  total_loss: [8.445433];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 13: 708 clusters, Clustering Accuracy: 0.7553
+==> Statistics for RGB epoch 13: 767 clusters, Clustering Accuracy: 0.7847
+==> Updated Statistics for RGB epoch 13: 491 clusters after cross-modal interaction
+Time: 2025-07-01 12:54:17; Epoch: 13; loss_ir: 1.2305032;  loss_rgb: 1.4908334;  loss_ir_frame: 0.90603423;  loss_rgb_frame: 1.4078723;  loss_neibor_rgb_rgb: 8.397095;  loss_neibor_rgb_rgb_frame: 1.0435662;  loss_neibor_ir_ir: 9.693837;  loss_neibor_ir_ir_frame: 1.0752524;  loss_neibor_ir_rgb: 10.722348;  loss_neibor_ir_rgb_frame: 2.109454;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [8.339396];  ; 2.5e-06
+Time: 2025-07-01 12:55:46; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 35.02% | Rank-1: 34.18% | Rank-5: 57.03% | Rank-10: 64.45% | Rank-20: 70.70%., 
+ task: IR ->RGB:  mAP: 34.13% | Rank-1: 32.57% | Rank-5: 54.79% | Rank-10: 62.45% | Rank-20: 69.73%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 14: 728 clusters, Clustering Accuracy: 0.7690
+==> Statistics for RGB epoch 14: 760 clusters, Clustering Accuracy: 0.7759
+==> Updated Statistics for RGB epoch 14: 509 clusters after cross-modal interaction
+Time: 2025-07-01 13:06:06; Epoch: 14; loss_ir: 1.0785221;  loss_rgb: 1.4091328;  loss_ir_frame: 0.7601579;  loss_rgb_frame: 1.2544658;  loss_neibor_rgb_rgb: 8.751217;  loss_neibor_rgb_rgb_frame: 1.0628858;  loss_neibor_ir_ir: 10.153368;  loss_neibor_ir_ir_frame: 1.0744393;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.179422;  loss_neibor_rgb_ir_frame: 2.0298488;  total_loss: [7.827396];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 15: 730 clusters, Clustering Accuracy: 0.7636
+==> Statistics for RGB epoch 15: 778 clusters, Clustering Accuracy: 0.7829
+==> Updated Statistics for RGB epoch 15: 493 clusters after cross-modal interaction
+Time: 2025-07-01 13:16:00; Epoch: 15; loss_ir: 0.9981712;  loss_rgb: 1.5954553;  loss_ir_frame: 0.7227936;  loss_rgb_frame: 1.472009;  loss_neibor_rgb_rgb: 8.740273;  loss_neibor_rgb_rgb_frame: 1.0769042;  loss_neibor_ir_ir: 10.42056;  loss_neibor_ir_ir_frame: 1.1027908;  loss_neibor_ir_rgb: 11.032515;  loss_neibor_ir_rgb_frame: 1.9590096;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [8.221636];  ; 2.5e-06
+Time: 2025-07-01 13:17:29; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 35.46% | Rank-1: 36.52% | Rank-5: 58.59% | Rank-10: 66.02% | Rank-20: 72.46%., 
+ task: IR ->RGB:  mAP: 34.75% | Rank-1: 33.72% | Rank-5: 56.32% | Rank-10: 65.13% | Rank-20: 70.88%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 16: 761 clusters, Clustering Accuracy: 0.7790
+==> Statistics for RGB epoch 16: 768 clusters, Clustering Accuracy: 0.7660
+==> Updated Statistics for RGB epoch 16: 505 clusters after cross-modal interaction
+Time: 2025-07-01 13:27:29; Epoch: 16; loss_ir: 1.0550084;  loss_rgb: 1.3446827;  loss_ir_frame: 0.732128;  loss_rgb_frame: 1.2179788;  loss_neibor_rgb_rgb: 8.776221;  loss_neibor_rgb_rgb_frame: 1.1133679;  loss_neibor_ir_ir: 10.178638;  loss_neibor_ir_ir_frame: 1.0710828;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.142002;  loss_neibor_rgb_ir_frame: 1.9921979;  total_loss: [7.6771502];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 17: 720 clusters, Clustering Accuracy: 0.7486
+==> Statistics for RGB epoch 17: 779 clusters, Clustering Accuracy: 0.7864
+==> Updated Statistics for RGB epoch 17: 478 clusters after cross-modal interaction
+Time: 2025-07-01 13:37:43; Epoch: 17; loss_ir: 1.0761243;  loss_rgb: 1.3601166;  loss_ir_frame: 0.8122458;  loss_rgb_frame: 1.2686622;  loss_neibor_rgb_rgb: 8.7686205;  loss_neibor_rgb_rgb_frame: 1.0877091;  loss_neibor_ir_ir: 10.126875;  loss_neibor_ir_ir_frame: 1.0725883;  loss_neibor_ir_rgb: 11.047639;  loss_neibor_ir_rgb_frame: 2.0017905;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.92767];  ; 2.5e-06
+Time: 2025-07-01 13:39:09; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 34.01% | Rank-1: 33.98% | Rank-5: 55.86% | Rank-10: 63.09% | Rank-20: 69.92%., 
+ task: IR ->RGB:  mAP: 31.64% | Rank-1: 31.03% | Rank-5: 51.34% | Rank-10: 59.96% | Rank-20: 68.58%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 18: 747 clusters, Clustering Accuracy: 0.7668
+==> Statistics for RGB epoch 18: 756 clusters, Clustering Accuracy: 0.7794
+==> Updated Statistics for RGB epoch 18: 506 clusters after cross-modal interaction
+Time: 2025-07-01 13:49:29; Epoch: 18; loss_ir: 1.1917397;  loss_rgb: 1.4860557;  loss_ir_frame: 0.8591855;  loss_rgb_frame: 1.3893533;  loss_neibor_rgb_rgb: 8.417248;  loss_neibor_rgb_rgb_frame: 1.0267581;  loss_neibor_ir_ir: 9.810045;  loss_neibor_ir_ir_frame: 1.061116;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.217877;  loss_neibor_rgb_ir_frame: 2.030015;  total_loss: [8.182643];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 19: 713 clusters, Clustering Accuracy: 0.7398
+==> Statistics for RGB epoch 19: 776 clusters, Clustering Accuracy: 0.7783
+==> Updated Statistics for RGB epoch 19: 486 clusters after cross-modal interaction
+Time: 2025-07-01 13:59:35; Epoch: 19; loss_ir: 1.0441221;  loss_rgb: 1.3878511;  loss_ir_frame: 0.7519644;  loss_rgb_frame: 1.2524251;  loss_neibor_rgb_rgb: 8.600435;  loss_neibor_rgb_rgb_frame: 1.1107352;  loss_neibor_ir_ir: 10.216999;  loss_neibor_ir_ir_frame: 1.1102806;  loss_neibor_ir_rgb: 11.108405;  loss_neibor_ir_rgb_frame: 2.0753767;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.858582];  ; 2.5e-06
+Time: 2025-07-01 14:01:02; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 33.81% | Rank-1: 34.57% | Rank-5: 53.71% | Rank-10: 63.09% | Rank-20: 72.46%., 
+ task: IR ->RGB:  mAP: 33.46% | Rank-1: 33.33% | Rank-5: 51.92% | Rank-10: 61.88% | Rank-20: 68.97%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 20: 728 clusters, Clustering Accuracy: 0.7655
+==> Statistics for RGB epoch 20: 760 clusters, Clustering Accuracy: 0.7777
+==> Updated Statistics for RGB epoch 20: 483 clusters after cross-modal interaction
+Time: 2025-07-01 14:11:01; Epoch: 20; loss_ir: 1.0560353;  loss_rgb: 1.2997172;  loss_ir_frame: 0.78182065;  loss_rgb_frame: 1.1423268;  loss_neibor_rgb_rgb: 8.895271;  loss_neibor_rgb_rgb_frame: 1.1244675;  loss_neibor_ir_ir: 10.190633;  loss_neibor_ir_ir_frame: 1.1184951;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.271161;  loss_neibor_rgb_ir_frame: 2.0906181;  total_loss: [7.6489635];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 21: 726 clusters, Clustering Accuracy: 0.7567
+==> Statistics for RGB epoch 21: 752 clusters, Clustering Accuracy: 0.7711
+==> Updated Statistics for RGB epoch 21: 495 clusters after cross-modal interaction
+Time: 2025-07-01 14:21:15; Epoch: 21; loss_ir: 1.050263;  loss_rgb: 1.2529441;  loss_ir_frame: 0.78098965;  loss_rgb_frame: 1.1474736;  loss_neibor_rgb_rgb: 9.119102;  loss_neibor_rgb_rgb_frame: 1.1074694;  loss_neibor_ir_ir: 10.28578;  loss_neibor_ir_ir_frame: 1.0954978;  loss_neibor_ir_rgb: 11.185683;  loss_neibor_ir_rgb_frame: 1.9610953;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.707133];  ; 2.5e-06
+Time: 2025-07-01 14:22:42; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 37.47% | Rank-1: 37.30% | Rank-5: 59.57% | Rank-10: 68.55% | Rank-20: 76.37%., 
+ task: IR ->RGB:  mAP: 35.77% | Rank-1: 35.63% | Rank-5: 54.98% | Rank-10: 65.52% | Rank-20: 72.99%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 22: 728 clusters, Clustering Accuracy: 0.7575
+==> Statistics for RGB epoch 22: 778 clusters, Clustering Accuracy: 0.7985
+==> Updated Statistics for RGB epoch 22: 508 clusters after cross-modal interaction
+Time: 2025-07-01 14:33:19; Epoch: 22; loss_ir: 1.0730187;  loss_rgb: 1.2442958;  loss_ir_frame: 0.7845623;  loss_rgb_frame: 1.1155187;  loss_neibor_rgb_rgb: 8.969517;  loss_neibor_rgb_rgb_frame: 1.1315416;  loss_neibor_ir_ir: 10.135995;  loss_neibor_ir_ir_frame: 1.0948516;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.2309475;  loss_neibor_rgb_ir_frame: 1.9940205;  total_loss: [7.573087];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 23: 724 clusters, Clustering Accuracy: 0.7670
+==> Statistics for RGB epoch 23: 768 clusters, Clustering Accuracy: 0.7801
+==> Updated Statistics for RGB epoch 23: 516 clusters after cross-modal interaction
+Time: 2025-07-01 14:44:03; Epoch: 23; loss_ir: 1.0553436;  loss_rgb: 1.4457343;  loss_ir_frame: 0.7787316;  loss_rgb_frame: 1.2872815;  loss_neibor_rgb_rgb: 8.860617;  loss_neibor_rgb_rgb_frame: 1.1217742;  loss_neibor_ir_ir: 10.339392;  loss_neibor_ir_ir_frame: 1.1229588;  loss_neibor_ir_rgb: 10.9672165;  loss_neibor_ir_rgb_frame: 2.027813;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [8.011069];  ; 2.5e-06
+Time: 2025-07-01 14:45:32; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 38.61% | Rank-1: 40.62% | Rank-5: 61.33% | Rank-10: 68.75% | Rank-20: 75.59%., 
+ task: IR ->RGB:  mAP: 37.17% | Rank-1: 37.74% | Rank-5: 57.66% | Rank-10: 65.13% | Rank-20: 71.65%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 24: 738 clusters, Clustering Accuracy: 0.7705
+==> Statistics for RGB epoch 24: 793 clusters, Clustering Accuracy: 0.7983
+==> Updated Statistics for RGB epoch 24: 509 clusters after cross-modal interaction
+Time: 2025-07-01 14:56:59; Epoch: 24; loss_ir: 1.0232278;  loss_rgb: 1.3044862;  loss_ir_frame: 0.7583648;  loss_rgb_frame: 1.2309486;  loss_neibor_rgb_rgb: 8.801903;  loss_neibor_rgb_rgb_frame: 1.0997857;  loss_neibor_ir_ir: 10.248013;  loss_neibor_ir_ir_frame: 1.1064492;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.261841;  loss_neibor_rgb_ir_frame: 1.9723527;  total_loss: [7.666064];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 25: 758 clusters, Clustering Accuracy: 0.7913
+==> Statistics for RGB epoch 25: 775 clusters, Clustering Accuracy: 0.7970
+==> Updated Statistics for RGB epoch 25: 534 clusters after cross-modal interaction
+Time: 2025-07-01 15:08:56; Epoch: 25; loss_ir: 1.1276901;  loss_rgb: 1.3183051;  loss_ir_frame: 0.8291891;  loss_rgb_frame: 1.2300727;  loss_neibor_rgb_rgb: 8.477539;  loss_neibor_rgb_rgb_frame: 1.0351336;  loss_neibor_ir_ir: 9.906132;  loss_neibor_ir_ir_frame: 1.0688055;  loss_neibor_ir_rgb: 10.972669;  loss_neibor_ir_rgb_frame: 1.9570212;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.8469834];  ; 2.5e-06
+Time: 2025-07-01 15:10:23; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 37.77% | Rank-1: 38.67% | Rank-5: 59.38% | Rank-10: 67.19% | Rank-20: 73.24%., 
+ task: IR ->RGB:  mAP: 37.69% | Rank-1: 38.12% | Rank-5: 57.09% | Rank-10: 66.28% | Rank-20: 72.80%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 26: 742 clusters, Clustering Accuracy: 0.7824
+==> Statistics for RGB epoch 26: 780 clusters, Clustering Accuracy: 0.7918
+==> Updated Statistics for RGB epoch 26: 524 clusters after cross-modal interaction
+Time: 2025-07-01 15:20:56; Epoch: 26; loss_ir: 0.8628566;  loss_rgb: 1.3327127;  loss_ir_frame: 0.6278237;  loss_rgb_frame: 1.189318;  loss_neibor_rgb_rgb: 9.329578;  loss_neibor_rgb_rgb_frame: 1.1379969;  loss_neibor_ir_ir: 10.641297;  loss_neibor_ir_ir_frame: 1.0983334;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.578579;  loss_neibor_rgb_ir_frame: 1.9953485;  total_loss: [7.4908257];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 27: 759 clusters, Clustering Accuracy: 0.7892
+==> Statistics for RGB epoch 27: 771 clusters, Clustering Accuracy: 0.7942
+==> Updated Statistics for RGB epoch 27: 510 clusters after cross-modal interaction
+Time: 2025-07-01 15:34:03; Epoch: 27; loss_ir: 0.9009686;  loss_rgb: 1.3451786;  loss_ir_frame: 0.61823285;  loss_rgb_frame: 1.2585105;  loss_neibor_rgb_rgb: 8.760322;  loss_neibor_rgb_rgb_frame: 1.0631062;  loss_neibor_ir_ir: 10.304753;  loss_neibor_ir_ir_frame: 1.1299394;  loss_neibor_ir_rgb: 11.165647;  loss_neibor_ir_rgb_frame: 1.9334409;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.5586104];  ; 2.5e-06
+Time: 2025-07-01 15:35:30; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 39.21% | Rank-1: 40.43% | Rank-5: 60.55% | Rank-10: 67.38% | Rank-20: 73.83%., 
+ task: IR ->RGB:  mAP: 37.18% | Rank-1: 38.12% | Rank-5: 58.43% | Rank-10: 65.52% | Rank-20: 73.75%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 28: 739 clusters, Clustering Accuracy: 0.7793
+==> Statistics for RGB epoch 28: 778 clusters, Clustering Accuracy: 0.7931
+==> Updated Statistics for RGB epoch 28: 514 clusters after cross-modal interaction
+Time: 2025-07-01 15:52:22; Epoch: 28; loss_ir: 1.0011793;  loss_rgb: 1.1947361;  loss_ir_frame: 0.6930332;  loss_rgb_frame: 1.1015451;  loss_neibor_rgb_rgb: 8.500852;  loss_neibor_rgb_rgb_frame: 1.1069566;  loss_neibor_ir_ir: 10.269095;  loss_neibor_ir_ir_frame: 1.1444813;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.108498;  loss_neibor_rgb_ir_frame: 2.081956;  total_loss: [7.3116765];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 29: 761 clusters, Clustering Accuracy: 0.7948
+==> Statistics for RGB epoch 29: 771 clusters, Clustering Accuracy: 0.8043
+==> Updated Statistics for RGB epoch 29: 519 clusters after cross-modal interaction
+Time: 2025-07-01 16:02:55; Epoch: 29; loss_ir: 0.9389146;  loss_rgb: 1.3031123;  loss_ir_frame: 0.68545693;  loss_rgb_frame: 1.2352694;  loss_neibor_rgb_rgb: 8.811529;  loss_neibor_rgb_rgb_frame: 1.0711883;  loss_neibor_ir_ir: 10.398782;  loss_neibor_ir_ir_frame: 1.1197045;  loss_neibor_ir_rgb: 11.218748;  loss_neibor_ir_rgb_frame: 1.9957932;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.6243277];  ; 2.5e-06
+Time: 2025-07-01 16:04:24; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 37.56% | Rank-1: 38.67% | Rank-5: 61.72% | Rank-10: 68.75% | Rank-20: 74.41%., 
+ task: IR ->RGB:  mAP: 36.09% | Rank-1: 35.63% | Rank-5: 57.28% | Rank-10: 65.90% | Rank-20: 75.86%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 30: 752 clusters, Clustering Accuracy: 0.7760
+==> Statistics for RGB epoch 30: 766 clusters, Clustering Accuracy: 0.7848
+==> Updated Statistics for RGB epoch 30: 507 clusters after cross-modal interaction
+Time: 2025-07-01 16:16:07; Epoch: 30; loss_ir: 0.944115;  loss_rgb: 1.1280531;  loss_ir_frame: 0.6765608;  loss_rgb_frame: 0.9931976;  loss_neibor_rgb_rgb: 9.493949;  loss_neibor_rgb_rgb_frame: 1.206686;  loss_neibor_ir_ir: 10.411562;  loss_neibor_ir_ir_frame: 1.1419626;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.535615;  loss_neibor_rgb_ir_frame: 1.9881232;  total_loss: [7.2197156];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 31: 758 clusters, Clustering Accuracy: 0.7813
+==> Statistics for RGB epoch 31: 758 clusters, Clustering Accuracy: 0.7881
+==> Updated Statistics for RGB epoch 31: 521 clusters after cross-modal interaction
+Time: 2025-07-01 16:27:45; Epoch: 31; loss_ir: 0.9923467;  loss_rgb: 1.2863935;  loss_ir_frame: 0.73761785;  loss_rgb_frame: 1.2273828;  loss_neibor_rgb_rgb: 8.629513;  loss_neibor_rgb_rgb_frame: 1.0868946;  loss_neibor_ir_ir: 10.338706;  loss_neibor_ir_ir_frame: 1.1006979;  loss_neibor_ir_rgb: 11.365907;  loss_neibor_ir_rgb_frame: 1.9376025;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.6896744];  ; 2.5e-06
+Time: 2025-07-01 16:29:12; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 38.40% | Rank-1: 40.43% | Rank-5: 60.35% | Rank-10: 69.34% | Rank-20: 73.83%., 
+ task: IR ->RGB:  mAP: 36.11% | Rank-1: 35.44% | Rank-5: 57.85% | Rank-10: 64.37% | Rank-20: 76.05%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 32: 751 clusters, Clustering Accuracy: 0.7768
+==> Statistics for RGB epoch 32: 764 clusters, Clustering Accuracy: 0.7917
+==> Updated Statistics for RGB epoch 32: 520 clusters after cross-modal interaction
+Time: 2025-07-01 16:39:51; Epoch: 32; loss_ir: 0.9511066;  loss_rgb: 1.2439041;  loss_ir_frame: 0.6981183;  loss_rgb_frame: 1.1164063;  loss_neibor_rgb_rgb: 9.088795;  loss_neibor_rgb_rgb_frame: 1.1362286;  loss_neibor_ir_ir: 10.342095;  loss_neibor_ir_ir_frame: 1.0998716;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.371738;  loss_neibor_rgb_ir_frame: 1.9752281;  total_loss: [7.4109335];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 33: 763 clusters, Clustering Accuracy: 0.7920
+==> Statistics for RGB epoch 33: 774 clusters, Clustering Accuracy: 0.7966
+==> Updated Statistics for RGB epoch 33: 493 clusters after cross-modal interaction
+Time: 2025-07-01 16:52:16; Epoch: 33; loss_ir: 0.927012;  loss_rgb: 1.300412;  loss_ir_frame: 0.6697247;  loss_rgb_frame: 1.1645386;  loss_neibor_rgb_rgb: 8.575484;  loss_neibor_rgb_rgb_frame: 1.095888;  loss_neibor_ir_ir: 10.174662;  loss_neibor_ir_ir_frame: 1.1275423;  loss_neibor_ir_rgb: 11.01458;  loss_neibor_ir_rgb_frame: 1.9765147;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.4581585];  ; 2.5e-06
+Time: 2025-07-01 16:53:44; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 35.81% | Rank-1: 35.16% | Rank-5: 56.64% | Rank-10: 66.02% | Rank-20: 73.83%., 
+ task: IR ->RGB:  mAP: 35.26% | Rank-1: 35.25% | Rank-5: 54.02% | Rank-10: 62.84% | Rank-20: 71.26%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 34: 746 clusters, Clustering Accuracy: 0.7788
+==> Statistics for RGB epoch 34: 772 clusters, Clustering Accuracy: 0.8002
+==> Updated Statistics for RGB epoch 34: 488 clusters after cross-modal interaction
+Time: 2025-07-01 17:04:32; Epoch: 34; loss_ir: 0.884055;  loss_rgb: 1.274367;  loss_ir_frame: 0.6454294;  loss_rgb_frame: 1.1114722;  loss_neibor_rgb_rgb: 8.9779215;  loss_neibor_rgb_rgb_frame: 1.1200742;  loss_neibor_ir_ir: 10.442413;  loss_neibor_ir_ir_frame: 1.1256918;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.365588;  loss_neibor_rgb_ir_frame: 2.008675;  total_loss: [7.319359];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 35: 748 clusters, Clustering Accuracy: 0.7825
+==> Statistics for RGB epoch 35: 749 clusters, Clustering Accuracy: 0.7852
+==> Updated Statistics for RGB epoch 35: 498 clusters after cross-modal interaction
+Time: 2025-07-01 17:14:50; Epoch: 35; loss_ir: 0.85040545;  loss_rgb: 1.2458028;  loss_ir_frame: 0.60916954;  loss_rgb_frame: 1.114471;  loss_neibor_rgb_rgb: 9.277161;  loss_neibor_rgb_rgb_frame: 1.1631635;  loss_neibor_ir_ir: 10.617088;  loss_neibor_ir_ir_frame: 1.1448195;  loss_neibor_ir_rgb: 11.242227;  loss_neibor_ir_rgb_frame: 1.924624;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.356757];  ; 2.5e-06
+Time: 2025-07-01 17:16:19; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 39.13% | Rank-1: 40.62% | Rank-5: 61.13% | Rank-10: 69.34% | Rank-20: 75.39%., 
+ task: IR ->RGB:  mAP: 37.95% | Rank-1: 38.12% | Rank-5: 58.05% | Rank-10: 68.01% | Rank-20: 75.29%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 36: 795 clusters, Clustering Accuracy: 0.8126
+==> Statistics for RGB epoch 36: 781 clusters, Clustering Accuracy: 0.7952
+==> Updated Statistics for RGB epoch 36: 519 clusters after cross-modal interaction
+Time: 2025-07-01 17:27:20; Epoch: 36; loss_ir: 0.9611743;  loss_rgb: 1.1982342;  loss_ir_frame: 0.67434675;  loss_rgb_frame: 1.0828413;  loss_neibor_rgb_rgb: 8.689197;  loss_neibor_rgb_rgb_frame: 1.136264;  loss_neibor_ir_ir: 10.313421;  loss_neibor_ir_ir_frame: 1.1131288;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.247813;  loss_neibor_rgb_ir_frame: 2.0791283;  total_loss: [7.274487];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 37: 754 clusters, Clustering Accuracy: 0.7816
+==> Statistics for RGB epoch 37: 762 clusters, Clustering Accuracy: 0.7788
+==> Updated Statistics for RGB epoch 37: 505 clusters after cross-modal interaction
+Time: 2025-07-01 17:37:38; Epoch: 37; loss_ir: 0.9363995;  loss_rgb: 1.2517164;  loss_ir_frame: 0.65046006;  loss_rgb_frame: 1.1366457;  loss_neibor_rgb_rgb: 8.901754;  loss_neibor_rgb_rgb_frame: 1.1641967;  loss_neibor_ir_ir: 10.365633;  loss_neibor_ir_ir_frame: 1.1608142;  loss_neibor_ir_rgb: 11.164661;  loss_neibor_ir_rgb_frame: 2.0234494;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.453275];  ; 2.5e-06
+Time: 2025-07-01 17:39:04; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 38.36% | Rank-1: 40.04% | Rank-5: 60.35% | Rank-10: 68.55% | Rank-20: 73.83%., 
+ task: IR ->RGB:  mAP: 36.41% | Rank-1: 36.40% | Rank-5: 57.47% | Rank-10: 65.33% | Rank-20: 72.80%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 38: 755 clusters, Clustering Accuracy: 0.7861
+==> Statistics for RGB epoch 38: 743 clusters, Clustering Accuracy: 0.7751
+==> Updated Statistics for RGB epoch 38: 502 clusters after cross-modal interaction
+Time: 2025-07-01 17:49:44; Epoch: 38; loss_ir: 0.88149357;  loss_rgb: 1.197382;  loss_ir_frame: 0.6456408;  loss_rgb_frame: 1.1002682;  loss_neibor_rgb_rgb: 8.771283;  loss_neibor_rgb_rgb_frame: 1.0835177;  loss_neibor_ir_ir: 10.4109535;  loss_neibor_ir_ir_frame: 1.1112955;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.559254;  loss_neibor_rgb_ir_frame: 1.9257507;  total_loss: [7.210988];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 39: 747 clusters, Clustering Accuracy: 0.7809
+==> Statistics for RGB epoch 39: 766 clusters, Clustering Accuracy: 0.7937
+==> Updated Statistics for RGB epoch 39: 513 clusters after cross-modal interaction
+Time: 2025-07-01 18:00:26; Epoch: 39; loss_ir: 0.8201126;  loss_rgb: 1.1032112;  loss_ir_frame: 0.57607263;  loss_rgb_frame: 0.9786094;  loss_neibor_rgb_rgb: 9.4673195;  loss_neibor_rgb_rgb_frame: 1.1662059;  loss_neibor_ir_ir: 10.5400305;  loss_neibor_ir_ir_frame: 1.121855;  loss_neibor_ir_rgb: 11.165046;  loss_neibor_ir_rgb_frame: 1.940305;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.0180826];  ; 2.5e-06
+Time: 2025-07-01 18:02:00; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 39.39% | Rank-1: 41.41% | Rank-5: 61.52% | Rank-10: 69.14% | Rank-20: 74.61%., 
+ task: IR ->RGB:  mAP: 38.42% | Rank-1: 38.70% | Rank-5: 59.58% | Rank-10: 68.01% | Rank-20: 74.90%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 40: 769 clusters, Clustering Accuracy: 0.7863
+==> Statistics for RGB epoch 40: 776 clusters, Clustering Accuracy: 0.7930
+==> Updated Statistics for RGB epoch 40: 516 clusters after cross-modal interaction
+Time: 2025-07-01 18:12:25; Epoch: 40; loss_ir: 0.8384262;  loss_rgb: 1.2252272;  loss_ir_frame: 0.5971107;  loss_rgb_frame: 1.1010696;  loss_neibor_rgb_rgb: 8.916759;  loss_neibor_rgb_rgb_frame: 1.1332408;  loss_neibor_ir_ir: 10.537084;  loss_neibor_ir_ir_frame: 1.1652523;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.399145;  loss_neibor_rgb_ir_frame: 1.968306;  total_loss: [7.173814];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 41: 748 clusters, Clustering Accuracy: 0.7766
+==> Statistics for RGB epoch 41: 762 clusters, Clustering Accuracy: 0.7858
+==> Updated Statistics for RGB epoch 41: 505 clusters after cross-modal interaction
+Time: 2025-07-01 18:23:34; Epoch: 41; loss_ir: 0.9613913;  loss_rgb: 1.192064;  loss_ir_frame: 0.66997623;  loss_rgb_frame: 1.1443355;  loss_neibor_rgb_rgb: 8.528332;  loss_neibor_rgb_rgb_frame: 1.0972794;  loss_neibor_ir_ir: 10.237204;  loss_neibor_ir_ir_frame: 1.1179842;  loss_neibor_ir_rgb: 11.175315;  loss_neibor_ir_rgb_frame: 1.9959949;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.3829746];  ; 2.5e-06
+Time: 2025-07-01 18:25:04; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 37.63% | Rank-1: 38.87% | Rank-5: 59.96% | Rank-10: 68.36% | Rank-20: 75.00%., 
+ task: IR ->RGB:  mAP: 38.25% | Rank-1: 39.46% | Rank-5: 60.34% | Rank-10: 64.56% | Rank-20: 73.37%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 42: 745 clusters, Clustering Accuracy: 0.7787
+==> Statistics for RGB epoch 42: 749 clusters, Clustering Accuracy: 0.7845
+==> Updated Statistics for RGB epoch 42: 500 clusters after cross-modal interaction
+Time: 2025-07-01 18:35:11; Epoch: 42; loss_ir: 0.85072803;  loss_rgb: 1.1127784;  loss_ir_frame: 0.61252636;  loss_rgb_frame: 1.0033474;  loss_neibor_rgb_rgb: 9.044802;  loss_neibor_rgb_rgb_frame: 1.1268432;  loss_neibor_ir_ir: 10.665148;  loss_neibor_ir_ir_frame: 1.1511601;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.50788;  loss_neibor_rgb_ir_frame: 1.9580035;  total_loss: [7.0247626];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 43: 743 clusters, Clustering Accuracy: 0.7806
+==> Statistics for RGB epoch 43: 767 clusters, Clustering Accuracy: 0.7933
+==> Updated Statistics for RGB epoch 43: 485 clusters after cross-modal interaction
+Time: 2025-07-01 18:45:16; Epoch: 43; loss_ir: 0.841286;  loss_rgb: 1.1148221;  loss_ir_frame: 0.6052399;  loss_rgb_frame: 0.9758147;  loss_neibor_rgb_rgb: 9.519384;  loss_neibor_rgb_rgb_frame: 1.1970516;  loss_neibor_ir_ir: 10.610239;  loss_neibor_ir_ir_frame: 1.164015;  loss_neibor_ir_rgb: 11.310329;  loss_neibor_ir_rgb_frame: 1.9359066;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.110854];  ; 2.5e-06
+Time: 2025-07-01 18:46:44; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 38.16% | Rank-1: 38.48% | Rank-5: 60.55% | Rank-10: 68.16% | Rank-20: 74.02%., 
+ task: IR ->RGB:  mAP: 36.64% | Rank-1: 37.93% | Rank-5: 56.32% | Rank-10: 65.52% | Rank-20: 74.71%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 44: 753 clusters, Clustering Accuracy: 0.7773
+==> Statistics for RGB epoch 44: 748 clusters, Clustering Accuracy: 0.7856
+==> Updated Statistics for RGB epoch 44: 501 clusters after cross-modal interaction
+Time: 2025-07-01 18:57:07; Epoch: 44; loss_ir: 0.8383027;  loss_rgb: 1.2972401;  loss_ir_frame: 0.597801;  loss_rgb_frame: 1.1732752;  loss_neibor_rgb_rgb: 9.062668;  loss_neibor_rgb_rgb_frame: 1.1729215;  loss_neibor_ir_ir: 10.258756;  loss_neibor_ir_ir_frame: 1.1229706;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.413361;  loss_neibor_rgb_ir_frame: 1.996279;  total_loss: [7.309314];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 45: 753 clusters, Clustering Accuracy: 0.7799
+==> Statistics for RGB epoch 45: 756 clusters, Clustering Accuracy: 0.7918
+==> Updated Statistics for RGB epoch 45: 503 clusters after cross-modal interaction
+Time: 2025-07-01 19:07:44; Epoch: 45; loss_ir: 0.8654139;  loss_rgb: 1.2009503;  loss_ir_frame: 0.6051306;  loss_rgb_frame: 1.1157788;  loss_neibor_rgb_rgb: 9.196078;  loss_neibor_rgb_rgb_frame: 1.1552603;  loss_neibor_ir_ir: 10.469393;  loss_neibor_ir_ir_frame: 1.1412693;  loss_neibor_ir_rgb: 11.112671;  loss_neibor_ir_rgb_frame: 1.9523593;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.2899756];  ; 2.5e-06
+Time: 2025-07-01 19:09:10; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 34.09% | Rank-1: 32.81% | Rank-5: 56.25% | Rank-10: 66.02% | Rank-20: 73.44%., 
+ task: IR ->RGB:  mAP: 34.57% | Rank-1: 32.95% | Rank-5: 56.13% | Rank-10: 65.33% | Rank-20: 73.18%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 46: 750 clusters, Clustering Accuracy: 0.7832
+==> Statistics for RGB epoch 46: 768 clusters, Clustering Accuracy: 0.8025
+==> Updated Statistics for RGB epoch 46: 483 clusters after cross-modal interaction
+Time: 2025-07-01 19:19:41; Epoch: 46; loss_ir: 0.9070615;  loss_rgb: 1.285091;  loss_ir_frame: 0.6230312;  loss_rgb_frame: 1.1647159;  loss_neibor_rgb_rgb: 8.840711;  loss_neibor_rgb_rgb_frame: 1.1211582;  loss_neibor_ir_ir: 10.3576355;  loss_neibor_ir_ir_frame: 1.1366011;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.353934;  loss_neibor_rgb_ir_frame: 2.0379162;  total_loss: [7.364694];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 47: 767 clusters, Clustering Accuracy: 0.8008
+==> Statistics for RGB epoch 47: 767 clusters, Clustering Accuracy: 0.7950
+==> Updated Statistics for RGB epoch 47: 491 clusters after cross-modal interaction
+Time: 2025-07-01 19:29:41; Epoch: 47; loss_ir: 0.91874576;  loss_rgb: 1.1576943;  loss_ir_frame: 0.6831783;  loss_rgb_frame: 1.0702616;  loss_neibor_rgb_rgb: 8.304138;  loss_neibor_rgb_rgb_frame: 1.1190004;  loss_neibor_ir_ir: 10.453376;  loss_neibor_ir_ir_frame: 1.1335007;  loss_neibor_ir_rgb: 11.229912;  loss_neibor_ir_rgb_frame: 2.0195;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.2558274];  ; 2.5e-06
+Time: 2025-07-01 19:31:08; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 36.57% | Rank-1: 36.33% | Rank-5: 58.79% | Rank-10: 66.80% | Rank-20: 75.00%., 
+ task: IR ->RGB:  mAP: 37.59% | Rank-1: 36.97% | Rank-5: 58.24% | Rank-10: 66.86% | Rank-20: 74.33%.
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 48: 763 clusters, Clustering Accuracy: 0.7906
+==> Statistics for RGB epoch 48: 750 clusters, Clustering Accuracy: 0.7833
+==> Updated Statistics for RGB epoch 48: 502 clusters after cross-modal interaction
+Time: 2025-07-01 19:41:08; Epoch: 48; loss_ir: 0.81629384;  loss_rgb: 1.0569896;  loss_ir_frame: 0.62761754;  loss_rgb_frame: 0.9670683;  loss_neibor_rgb_rgb: 9.365928;  loss_neibor_rgb_rgb_frame: 1.2050238;  loss_neibor_ir_ir: 10.669204;  loss_neibor_ir_ir_frame: 1.1313602;  loss_neibor_ir_rgb: [0.];  loss_neibor_ir_rgb_frame: [0.];  loss_neibor_rgb_ir: 10.512693;  loss_neibor_rgb_ir_frame: 1.907747;  total_loss: [6.947166];  ; 2.5e-06
+==> Create pseudo labels for unlabeled RGB data
+==> Create pseudo labels for unlabeled IR data
+==> Statistics for IR epoch 49: 756 clusters, Clustering Accuracy: 0.7936
+==> Statistics for RGB epoch 49: 764 clusters, Clustering Accuracy: 0.7925
+==> Updated Statistics for RGB epoch 49: 498 clusters after cross-modal interaction
+Time: 2025-07-01 19:50:52; Epoch: 49; loss_ir: 0.8446801;  loss_rgb: 1.1046882;  loss_ir_frame: 0.6026094;  loss_rgb_frame: 0.96041113;  loss_neibor_rgb_rgb: 9.276251;  loss_neibor_rgb_rgb_frame: 1.2120255;  loss_neibor_ir_ir: 10.649424;  loss_neibor_ir_ir_frame: 1.1758231;  loss_neibor_ir_rgb: 11.138659;  loss_neibor_ir_rgb_frame: 1.9677702;  loss_neibor_rgb_ir: [0.];  loss_neibor_rgb_ir_frame: [0.];  total_loss: [7.054385];  ; 2.5e-06
+Time: 2025-07-01 19:52:18; Test on Dataset: bupt, 
+ task: RGB->IR :  mAP: 37.19% | Rank-1: 35.55% | Rank-5: 61.72% | Rank-10: 67.58% | Rank-20: 74.61%., 
+ task: IR ->RGB:  mAP: 38.62% | Rank-1: 38.89% | Rank-5: 58.81% | Rank-10: 66.28% | Rank-20: 75.86%.
+Total running time:9:51:43.641252 
